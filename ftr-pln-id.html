@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Dashboard — Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <!-- <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" /> -->
+    </a>
+    <button
+      class="btn btn-link p-0"
+      data-toggle="sidebar"
+      data-target="#sidebar-dashboard"
+    >
+      <img src="img/ic-menu-bar.svg" alt="icon menu" />
+    </button>
+  </div>
+</nav>
+ <aside id="sidebar-dashboard" class="sidebar">
+  <div class="sidebar-group">
+    <div class="sidebar-header">
+      <div class="header-logo">
+        <!-- <img src="img/logo-fello-merchant-black.svg" alt="logo" /> -->
+      </div>
+      <div class="header-account">
+        <div class="account-initial" data-name="ADM"></div>
+        <!-- <img src="img/logo-brand.svg" class="account-logo" alt="logo brand" /> -->
+        <div class="account-content">
+          <h5 class="account-name">Administrator</h5>
+          <h5 class="account-id">Brand ID - 1819220041864</h5>
+        </div>
+      </div>
+      <div class="menu-notification">
+        <a href="notification.html" class="">
+          <div class="menu-notification-group">
+            <span class="icon-menu ic-notification"></span>
+            <span>Notifikasi</span>
+          </div>
+          <div class="menu-notification-badge">1</div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar-body">
+      <ul id="sidebarMenu" class="sidebar-menu-group">
+        <li class="menu-item">
+          <a href="dashboard.html">
+            <span class="icon-menu ic-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="home.html">
+            <span class="icon-menu ic-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="menu-item menu-tree">
+          <a
+            href="#"
+            aria-expanded="false"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuRcn"
+          >
+            <div class="d-flex align-items-center">
+              <span class="icon-menu ic-report"></span>
+              <span>Rekon PLN ID</span>
+            </div>
+            <span class="icon-menu ic-dropdown"></span>
+          </a>
+          <ul
+            id="menuRcn"
+            class="menu-item-collapse collapse"
+            data-bs-parent="#sidebarMenu"
+          >
+            <li>
+              <a href="ftr-pln-id.html">
+                <span class="icon-menu ic-circle"></span>
+                <span>FTR PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>RCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>FCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>SETTLEMENT</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>KIRIM EMAIL</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar-footer">
+    <div class="sidebar-footer-group">
+      <h5 class="account-user">Satria Bergetar</h5>
+      <span class="account-role">Individu</span>
+    </div>
+    <div class="btn-group dropup">
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img src="img/ic-dot-vertical.svg" alt="icon dot" />
+      </button>
+      <ul class="dropdown-menu dropdown-account-footer">
+        <li>
+          <a class="dropdown-item" href="user-profile.html">
+            <img src="img/ic-profile.svg" alt="profile" />
+            Profil Saya
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img src="img/ic-logout-sm.svg" alt="logout" />
+            Keluar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main class="main bg-soft-white">
+      <div class="content">
+        <div class="content-header">
+          <h1 class="header-title">FTR PLN ID</h1>
+        </div>
+        <div class="content-body">
+          <div class="card card-accordion mb-4" id="ftrAccordion">
+            <div
+              class="card-header"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFtr"
+              aria-expanded="true"
+              aria-controls="collapseFtr"
+            >
+              <h5 class="card-title">FTR</h5>
+            </div>
+            <div
+              id="collapseFtr"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#ftrAccordion"
+            >
+              <div class="accordion-body p-4 pt-0">
+                <form id="formFtr" method="POST" action="">
+                <div class="list-group p-4">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group mb-4">
+                        <select
+                          id="productName"
+                          class="form-control select2"
+                          name="productName"
+                          data-placeholder="Pilih Nama Product"
+                          data-minimum-results-for-search="-1"
+                          required
+                        >
+                          <option value=""></option>
+                          <option value="501">(501) - PLN POSTPAID</option>
+                          <option value="502">(502) - PLN PREPAID</option>
+                          <option value="504">(504) - PLN NON TAGLIS</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select
+                          id="bankName"
+                          class="form-control select2"
+                          name="bankName"
+                          data-placeholder="Pilih Nama Bank"
+                          data-minimum-results-for-search="-1"
+                          required
+                        >
+                          <option value=""></option>
+                          <option value="0110020">
+                            (0110020 - BAN1) - DANAMON
+                          </option>
+                          <option value="0110021">
+                            (0110021 - BAN2) - PERMATA
+                          </option>
+                          <option value="0110024">
+                            (0110024 - BAN4) - NIAGA
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-start mt-4 gap-2"
+                >
+                  <button
+                    type="submit"
+                    form="sftp-configuration"
+                    class="btn btn-warning px-4 text-white"
+                    value="pantauDownloadFTR"
+                  >
+                    Pantau Download FTR
+                  </button>
+                  <button
+                    type="submit"
+                    form="sftp-configuration"
+                    class="btn btn-warning px-4 text-white"
+                    value="pantauImportFTR"
+                  >
+                    Pantau Import FTR
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-accordion mb-4" id="pFtrAccordion">
+            <div
+              class="card-header"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsepFtr"
+              aria-expanded="true"
+              aria-controls="collapsepFtr"
+            >
+              <h5 class="card-title">FTR</h5>
+            </div>
+            <div
+              id="collapsepFtr"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#pFtrAccordion"
+            >
+              <div class="accordion-body p-4 pt-0">
+                <form id="formFtr" method="POST" action="">
+                <div class="list-group p-4">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <table id="tableFtr" class="table table-hover table-striped no-border-top nowrap mb-0">
+                        <thead>
+                          <tr>
+                            <th>Keterangan</th>
+                            <th>Record</th>
+                            <th>Amount</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Tesing</td>
+                            <td>12000</td>
+                            <td>10000</td>
+                          </tr>
+                          <tr>
+                            <td>Tesing</td>
+                            <td>12000</td>
+                            <td>10000</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#tableFtr').DataTable();
+      });
+    </script>
+  </body>
+</html>
