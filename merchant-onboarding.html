@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" />
+    </a>
+    <div
+      class="d-flex d-md-none icon-link-logout"
+      data-bs-toggle="modal"
+      data-bs-target="#modalLogout"
+    >
+      <img src="img/ic-logout-sm.svg" alt="icon logout" />
+      <span>Keluar</span>
+    </div>
+  </div>
+</nav>
+
+    <main class="main">
+      <div class="account-type-cover">
+        <div class="d-flex flex-column align-items-start gap-5">
+          <img
+            src="img/logo-fello-merchant-white.svg"
+            class="img-logo"
+            alt="logo fello merchant"
+          />
+          <div class="d-flex flex-column gap-4 mt-3">
+            <h3 class="title">
+              Demi keamanan, kami membutuhkan verifikasi data identitas
+            </h3>
+            <p class="description">
+              Kami menjamin kerahasiaan data identitas hanya untuk proses
+              verifikasi
+            </p>
+          </div>
+        </div>
+        <img src="img/img-account-type.svg" alt="account type image" />
+      </div>
+      <div class="account-type-form">
+        <div
+          class="d-none d-md-flex icon-link-logout"
+          data-bs-toggle="modal"
+          data-bs-target="#modalLogout"
+        >
+          <img src="img/ic-logout-sm.svg" alt="icon logout" />
+          <span>Keluar</span>
+        </div>
+        <form
+          id="account-type-form"
+          action="POST"
+          class="form form-validation"
+          autocomplete="off"
+        >
+          <div class="form-header">
+            <h1 class="form-header-title">Jenis Bisnis</h1>
+            <div
+              class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between"
+            >
+              <p class="form-header-description">
+                Pilih jenis bisnis yang sesuai dengan kebutuhan Anda
+              </p>
+              <a
+                href="#"
+                class="col-12 col-md-4 text-sm text-primary text-end mt-4 mt-md-0"
+                data-bs-toggle="modal"
+                data-bs-target="#modalPersyaratan"
+                >Persyaratan Dokumen</a
+              >
+            </div>
+          </div>
+          <div class="form-content">
+            <label for="account-type-individual" class="card-select">
+              <input
+                type="radio"
+                name="account-type"
+                value="1"
+                id="account-type-individual"
+                required
+              />
+              <div class="card-select-item">
+                <div class="select-item-content">
+                  <img
+                    src="img/business-type-individual.svg"
+                    alt="type individual"
+                  />
+                  <div class="d-flex flex-column gap-2">
+                    <h4 class="title">Individu</h4>
+                    <p class="description">
+                      Dapatkan kemudahan menjadi merchant individu
+                    </p>
+                  </div>
+                </div>
+                <div class="select-check-icon"></div>
+              </div>
+            </label>
+            <label for="account-type-business" class="card-select">
+              <input
+                type="radio"
+                name="account-type"
+                value="2"
+                id="account-type-business"
+                required
+              />
+              <div class="card-select-item">
+                <div class="select-item-content">
+                  <img
+                    src="img/business-type-company.svg"
+                    alt="type business"
+                  />
+                  <div class="d-flex flex-column gap-2">
+                    <h4 class="title">Badan Usaha</h4>
+                    <p class="description">
+                      Dapatkan kemudahan menjadi merchant
+                    </p>
+                  </div>
+                </div>
+                <div class="select-check-icon"></div>
+              </div>
+            </label>
+            <label for="account-type-aggregator" class="card-select">
+              <input
+                type="radio"
+                name="account-type"
+                value="3"
+                id="account-type-aggregator"
+                required
+              />
+              <div class="card-select-item">
+                <div class="select-item-content">
+                  <img
+                    src="img/business-type-aggregator.svg"
+                    alt="type aggregator"
+                  />
+                  <div class="d-flex flex-column gap-2">
+                    <h4 class="title">Aggregator</h4>
+                    <p class="description">
+                      Menjadi aggregator atas merchant-merchant Anda
+                    </p>
+                  </div>
+                </div>
+                <div class="select-check-icon"></div>
+              </div>
+            </label>
+          </div>
+          <div
+            class="d-none d-md-flex form-footer mt-3 align-items-start align-items-md-end"
+          >
+            <button
+              type="submit"
+              class="btn btn-primary w-100 w-md-35"
+              disabled
+            >
+              Lanjutkan
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <div class="action-bottom">
+      <button
+        type="submit"
+        form="account-type-form"
+        class="btn btn-primary w-100 w-md-35"
+        disabled
+      >
+        Lanjutkan
+      </button>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalPersyaratan"
+      tabindex="-1"
+      aria-labelledby="modalPersyaratanLabel"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Persyaratan Dokumen</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="accordion accordion-custom" id="accordionPersyaratan">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseIndividu"
+                    aria-expanded="true"
+                    aria-controls="collapseIndividu"
+                  >
+                    Individu
+                  </button>
+                </h2>
+                <div
+                  id="collapseIndividu"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionPersyaratan"
+                >
+                  <div class="accordion-body">
+                    <ol class="counter-list">
+                      <li class="text-sm">Foto e-KTP</li>
+                      <li class="text-sm">Foto selfie dengan e-KTP</li>
+                      <li class="text-sm">Foto NPWP</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Badan Usaha
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionPersyaratan"
+                >
+                  <div class="accordion-body">
+                    <ol class="counter-list">
+                      <li class="text-sm">Foto e-KTP</li>
+                      <li class="text-sm">Foto selfie dengan e-KTP</li>
+                      <li class="text-sm">Foto NPWP Perusahaan</li>
+                      <li class="text-sm">NIB (Nomor Induk Berusaha)</li>
+                      <li class="text-sm">
+                        SIUP (Surat Izin Usaha Perdagangan)
+                      </li>
+                      <li class="text-sm">Akta Pendirian & Perusahaan</li>
+                      <li class="text-sm">SK Kemenkumham</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Aggregator
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionPersyaratan"
+                >
+                  <div class="accordion-body">
+                    <ol class="counter-list">
+                      <li class="text-sm">Foto e-KTP</li>
+                      <li class="text-sm">Foto selfie dengan e-KTP</li>
+                      <li class="text-sm">Foto NPWP Perusahaan</li>
+                      <li class="text-sm">NIB (Nomor Induk Berusaha)</li>
+                      <li class="text-sm">
+                        SIUP (Surat Izin Usaha Perdagangan)
+                      </li>
+                      <li class="text-sm">Akta Pendirian & Perusahaan</li>
+                      <li class="text-sm">SK Kemenkumham</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+  class="modal fade"
+  id="modalLogout"
+  tabindex="-1"
+  aria-labelledby="modalLogoutLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-notify">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="d-flex flex-column align-items-center py-4 gap-4">
+          <img src="img/ic-logout.svg" alt="icon logout" />
+          <div class="d-flex flex-column align-items-center gap-2">
+            <h3 class="text-neutral-100 fs-5 fw-bold mb-0">Ingin Keluar?</h3>
+            <p class="text-neutral-70 text-sm text-center">
+              Anda dapat melanjutkan verifikasi data dengan masuk menggunakan
+              akun yang sudah terdaftar
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer flex-row">
+        <button
+          class="btn btn-outline-base w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#modalLogout"
+        >
+          Lanjutkan
+        </button>
+        <button class="btn btn-danger w-100">Keluar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script type="text/javascript">
+      $(function () {
+        app.FormValidation.init("#account-type-form");
+
+        $(".form").on("submit", function (e) {
+          e.preventDefault();
+          let accountType = 0;
+
+          $(this)
+            .find("input")
+            .each(function () {
+              if ($(this).is(":checked")) {
+                accountType = $(this).val();
+              }
+            });
+
+          location.href = `step-owner-information.html?type=${accountType}`;
+        });
+      });
+    </script>
+  </body>
+</html>

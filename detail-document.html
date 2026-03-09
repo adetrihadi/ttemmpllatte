@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Detail Dokumen — Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <!-- <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" /> -->
+    </a>
+    <button
+      class="btn btn-link p-0"
+      data-toggle="sidebar"
+      data-target="#sidebar-dashboard"
+    >
+      <img src="img/ic-menu-bar.svg" alt="icon menu" />
+    </button>
+  </div>
+</nav>
+ <aside id="sidebar-dashboard" class="sidebar">
+  <div class="sidebar-group">
+    <div class="sidebar-header">
+      <div class="header-logo">
+        <!-- <img src="img/logo-fello-merchant-black.svg" alt="logo" /> -->
+      </div>
+      <div class="header-account">
+        <div class="account-initial" data-name="ADM"></div>
+        <!-- <img src="img/logo-brand.svg" class="account-logo" alt="logo brand" /> -->
+        <div class="account-content">
+          <h5 class="account-name">Administrator</h5>
+          <h5 class="account-id">Brand ID - 1819220041864</h5>
+        </div>
+      </div>
+      <div class="menu-notification">
+        <a href="notification.html" class="">
+          <div class="menu-notification-group">
+            <span class="icon-menu ic-notification"></span>
+            <span>Notifikasi</span>
+          </div>
+          <div class="menu-notification-badge">1</div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar-body">
+      <ul id="sidebarMenu" class="sidebar-menu-group">
+        <li class="menu-item">
+          <a href="dashboard.html">
+            <span class="icon-menu ic-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="home.html">
+            <span class="icon-menu ic-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="menu-item menu-tree">
+          <a
+            href="#"
+            aria-expanded="false"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuRcn"
+          >
+            <div class="d-flex align-items-center">
+              <span class="icon-menu ic-report"></span>
+              <span>Rekon PLN ID</span>
+            </div>
+            <span class="icon-menu ic-dropdown"></span>
+          </a>
+          <ul
+            id="menuRcn"
+            class="menu-item-collapse collapse"
+            data-bs-parent="#sidebarMenu"
+          >
+            <li>
+              <a href="ftr-pln-id.html">
+                <span class="icon-menu ic-circle"></span>
+                <span>FTR PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>RCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>FCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>SETTLEMENT</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>KIRIM EMAIL</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar-footer">
+    <div class="sidebar-footer-group">
+      <h5 class="account-user">Satria Bergetar</h5>
+      <span class="account-role">Individu</span>
+    </div>
+    <div class="btn-group dropup">
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img src="img/ic-dot-vertical.svg" alt="icon dot" />
+      </button>
+      <ul class="dropdown-menu dropdown-account-footer">
+        <li>
+          <a class="dropdown-item" href="user-profile.html">
+            <img src="img/ic-profile.svg" alt="profile" />
+            Profil Saya
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img src="img/ic-logout-sm.svg" alt="logout" />
+            Keluar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main class="main bg-soft-white">
+      <div class="content">
+        <div class="content-header">
+          <h1 class="header-title">Detail Dokumen</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb with-arrow">
+              <li class="breadcrumb-item">
+                <a href="data-merchant.html">Data Merchant</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="data-information.html">Informasi Merchant</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Detail Dokumen
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="content-body">
+          <form class="form gap-0">
+            <div class="card card-background mb-4">
+              <div class="card-body">
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-between row-gap-4"
+                >
+                  <div class="d-flex flex-column flex-fill">
+                    <h3 class="fs-5 font-bold text-white">Samantha Putri</h3>
+                    <p class="text-sm text-white fw-medium">
+                      Brand ID - 20092024140021
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex flex-column justify-content-between flex-fill row-gap-2"
+                  >
+                    <div
+                      class="d-flex flex-row align-items-center justify-content-between"
+                    >
+                      <p class="d-none d-md-block text-sm text-white fw-medium">
+                        Email
+                      </p>
+                      <p class="text-sm text-white fw-medium">
+                        samanthaputri@gmail.com
+                      </p>
+                    </div>
+                    <div class="divider"></div>
+                    <div
+                      class="d-flex flex-row align-items-center justify-content-between"
+                    >
+                      <p class="d-none d-md-block text-sm text-white fw-medium">
+                        Nomor Handphone
+                      </p>
+                      <p class="text-sm text-white fw-medium">081234567890</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <div
+                  class="d-flex align-items-center justify-content-between p-4"
+                >
+                  <div class="d-flex flex-column">
+                    <h5 class="fs-6 font-bold mb-1">
+                      Status Persyaratan Dokumen
+                    </h5>
+                    <h2 class="text-xs text-neutral-70 mb-0">
+                      Approved - 26/09/2024 • 15:00
+                    </h2>
+                  </div>
+                  <span class="dt-status dt-lg status-success">Approved</span>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <div
+                  class="d-flex align-items-center justify-content-between p-4"
+                >
+                  <p class="text-sm fw-medium text-neutral-100 mb-0">
+                    Jenis Bisnis
+                  </p>
+                  <p class="text-sm text-neutral-100 fw-bold">Individu</p>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion mb-4" id="detailOwner">
+              <div
+                class="card-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseDetailOwner"
+                aria-expanded="true"
+                aria-controls="collapseDetailOwner"
+              >
+                <h5 class="card-title">Informasi Pemilik</h5>
+              </div>
+              <div
+                id="collapseDetailOwner"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#detailOwner"
+              >
+                <div class="accordion-body p-4 pt-0">
+                  <ul class="list-group mb-4">
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Nama Pemilik</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          Samantha Putri
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Tempat Lahir</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          Surabaya
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Tanggal Lahir</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          01/01/1990
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">
+                          Nomor Handphone
+                        </p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          081234567890
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Email</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          samanthaputri@gmail.com
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Provinsi</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          DKI Jakarta
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Kota/Kabupaten</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          Jakarta Selatan
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Kecamatan</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          Kebayoran Baru
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Kelurahan</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          Melawai
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Alamat</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          Jalan Sunan Kalijaga Blok K/5, No 63B, RT003 RW001
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="list-group mb-4">
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">
+                          Nomor KTP (NIK)
+                        </p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          3175070101908880
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Nomor NPWP</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          092542943407000
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="list-group mb-4">
+                    <li class="list-group-item">
+                      <div class="d-flex flex-row flex-wrap gap-4">
+                        <div
+                          class="d-flex flex-column align-items-start justify-content-between"
+                        >
+                          <p class="fw-medium mb-1">Foto KTP</p>
+                          <img
+                            src="img/thumbnail-placeholder.svg"
+                            class="img-thumbnail w-100 p-0 rounded"
+                            alt="..."
+                          />
+                        </div>
+                        <div
+                          class="d-flex flex-column align-items-start justify-content-between"
+                        >
+                          <p class="fw-medium mb-1">Foto Selfie dengan KTP</p>
+                          <img
+                            src="img/thumbnail-placeholder.svg"
+                            class="img-thumbnail w-100 p-0 rounded"
+                            alt="..."
+                          />
+                        </div>
+                        <div
+                          class="d-flex flex-column align-items-start justify-content-between"
+                        >
+                          <p class="fw-medium mb-1">Foto NPWP</p>
+                          <img
+                            src="img/thumbnail-placeholder.svg"
+                            class="img-thumbnail w-100 p-0 rounded"
+                            alt="..."
+                          />
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion mb-4" id="detailBusiness">
+              <div
+                class="card-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseDetailBusiness"
+                aria-expanded="true"
+                aria-controls="collapseDetailBusiness"
+              >
+                <h5 class="card-title">Informasi Usaha</h5>
+              </div>
+              <div
+                id="collapseDetailBusiness"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#detailBusiness"
+              >
+                <div class="accordion-body p-4 pt-0">
+                  <ul class="list-group mb-4">
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Nama Usaha</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          Fellopay
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Kategori Usaha</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          Usaha Menengah
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-start justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">
+                          Keterangan Usaha
+                        </p>
+                        <p class="fw-medium text-neutral-100 text-end w-75">
+                          Fellopay sistem pembayaran yang dimiliki Jatelindo
+                          Perkasa Abadi, Fellopay menawarkan kemudahan
+                          bertransaksi dalam melakukan pembayaran secara online
+                          di merchant dengan berbagai pilihan metode pembayaran
+                          yang terintegrasi bagi merchant agar operasional
+                          bisnis berjalan dengan lancar dan dapat dapat
+                          menjangkau lebih banyak pelanggan dalam melakukan
+                          pembayaran.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Email Usaha</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          fellopay@gmail.com
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">
+                          Nomor Handphone
+                        </p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          081234567890
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="list-group mb-4">
+                    <li class="list-group-item">
+                      <div class="d-flex flex-row flex-wrap gap-4">
+                        <div
+                          class="d-flex flex-column align-items-start justify-content-start"
+                        >
+                          <p class="fw-medium mb-1">Logo Brand</p>
+                          <img
+                            src="img/thumbnail-placeholder.svg"
+                            class="img-thumbnail w-100 p-0 rounded"
+                            alt="..."
+                          />
+                        </div>
+                        <div
+                          class="d-flex flex-column align-items-start justify-content-start"
+                        >
+                          <p class="fw-medium mb-1">
+                            Foto Lokasi Bisnis / Aktivitas / Produk
+                          </p>
+                          <img
+                            src="img/thumbnail-placeholder.svg"
+                            class="img-thumbnail w-100 p-0 rounded"
+                            alt="..."
+                          />
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion mb-4" id="detailService">
+              <div
+                class="card-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseDetailService"
+                aria-expanded="true"
+                aria-controls="collapseDetailService"
+              >
+                <h5 class="card-title">Layanan</h5>
+              </div>
+              <div
+                id="collapseDetailService"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#detailService"
+              >
+                <div class="accordion-body p-4 pt-0">
+                  <div class="list-group mb-4">
+                    <div class="list-group-item">
+                      <div class="container px-0">
+                        <div class="row row-gap-4">
+                          <div class="col-12 col-md-6 form-group form-preview">
+                            <div class="input-append append-right">
+                              <input
+                                type="text"
+                                name="service[]"
+                                class="form-control"
+                                value="FELLO H2H"
+                                disabled
+                              />
+                              <div class="append-icon icon-checked"></div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6 form-group form-preview">
+                            <div class="input-append append-right">
+                              <input
+                                type="text"
+                                name="service[]"
+                                class="form-control"
+                                value="Fellopay PG"
+                                disabled
+                              />
+                              <div class="append-icon icon-checked"></div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6 form-group form-preview">
+                            <div class="input-append append-right">
+                              <input
+                                type="text"
+                                name="service[]"
+                                class="form-control"
+                                value="QRIS Dinamis MPM"
+                                disabled
+                              />
+                              <div class="append-icon icon-checked"></div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6 form-group form-preview">
+                            <div class="input-append append-right">
+                              <input
+                                type="text"
+                                name="service[]"
+                                class="form-control"
+                                value="QRIS Statis MPM"
+                                disabled
+                              />
+                              <div class="append-icon icon-checked"></div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6 form-group form-preview">
+                            <div class="input-append append-right">
+                              <input
+                                type="text"
+                                name="service[]"
+                                class="form-control"
+                                value="Transfer Dana"
+                                disabled
+                              />
+                              <div class="append-icon icon-checked"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion mb-4" id="detailBankAccount">
+              <div
+                class="card-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseDetailBankAccount"
+                aria-expanded="true"
+                aria-controls="collapseDetailBankAccount"
+              >
+                <h5 class="card-title">Rekening Bank</h5>
+              </div>
+              <div
+                id="collapseDetailBankAccount"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#detailBankAccount"
+              >
+                <div class="accordion-body p-4 pt-0">
+                  <ul class="list-group mb-4">
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Nama Bank</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          Bank Mandiri
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">MCC</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          1260012221528
+                        </p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <p class="fw-medium text-neutral-100">Nama Pemilik</p>
+                        <p class="fw-medium text-neutral-100 text-end">
+                          Jatelindo Perkasa Abadi
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion mb-4" id="detailDocument">
+              <div
+                class="card-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseDetailDocument"
+                aria-expanded="true"
+                aria-controls="collapseDetailDocument"
+              >
+                <h5 class="card-title">Dokumen</h5>
+              </div>
+              <div
+                id="collapseDetailDocument"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#detailDocument"
+              >
+                <div class="accordion-body p-4 pt-0">
+                  <div class="list-group mb-4">
+                    <div class="list-group-item">
+                      <div class="container px-0">
+                        <div class="row row-gap-4">
+                          <div class="col-12 col-md-6 form-group form-preview">
+                            <div class="form-group">
+                              <div class="input-file-box">
+                                <div class="input-jpg-preview"></div>
+                                <div class="input-file-detail">
+                                  <h3 class="file-detail-title">NPWP</h3>
+                                  <a href="#" class="file-detail-subtitle">
+                                    Klik lihat detail
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6 form-group form-preview">
+                            <div class="form-group">
+                              <div class="input-file-box">
+                                <div class="input-png-preview"></div>
+                                <div class="input-file-detail">
+                                  <h3 class="file-detail-title">
+                                    NIB (Nomor Induk Berusaha)
+                                  </h3>
+                                  <a href="#" class="file-detail-subtitle">
+                                    Klik lihat detail
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6 form-group form-preview">
+                            <div class="form-group">
+                              <div class="input-file-box">
+                                <div class="input-pdf-preview"></div>
+                                <div class="input-file-detail">
+                                  <h3 class="file-detail-title">
+                                    SIUP (Surat Izin Usaha Perdagangan)
+                                  </h3>
+                                  <a href="#" class="file-detail-subtitle">
+                                    Klik lihat detail
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6 form-group form-preview">
+                            <div class="form-group">
+                              <div class="input-file-box">
+                                <div class="input-pdf-preview"></div>
+                                <div class="input-file-detail">
+                                  <h3 class="file-detail-title">
+                                    Akta Pendirian & Perubahan
+                                  </h3>
+                                  <a href="#" class="file-detail-subtitle">
+                                    Klik lihat detail
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6 form-group form-preview">
+                            <div class="form-group">
+                              <div class="input-file-box">
+                                <div class="input-pdf-preview"></div>
+                                <div class="input-file-detail">
+                                  <h3 class="file-detail-title">
+                                    SK Kemenkumham
+                                  </h3>
+                                  <a href="#" class="file-detail-subtitle">
+                                    Klik lihat detail
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion mb-4" id="detailCriteriaMerchant">
+              <div
+                class="card-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseCriteriaMerchant"
+                aria-expanded="true"
+                aria-controls="collapseCriteriaMerchant"
+              >
+                <h5 class="card-title">Kriteria dan MCC Merchant</h5>
+              </div>
+              <div
+                id="collapseCriteriaMerchant"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#detailCriteriaMerchant"
+              >
+                <div class="accordion-body p-4 pt-0">
+                  <div class="form-group mb-3">
+                    <label for="merchantCriteria" class="form-label">
+                      Kriteria Merchant
+                    </label>
+                    <select
+                      id="merchantCriteria"
+                      class="form-control select2"
+                      name="merchantCriteria"
+                      data-value="merchantCriteria"
+                      data-placeholder="Pilih kriteria merchant"
+                      required
+                      disabled
+                    >
+                      <option value=""></option>
+                      <option value="1" selected>(UMI) Usaha Mikro</option>
+                      <option value="2">(UKE) Usaha Kecil</option>
+                      <option value="3">(UME) Usaha Menengah</option>
+                      <option value="4">(UBE) Usaha Besar</option>
+                      <option value="5">(URE) Usaha Reguler</option>
+                      <option value="6">Pendidikan</option>
+                      <option value="7">
+                        (SPBU) Stasiun Pengisian Bahan Bakar Umum
+                      </option>
+                      <option value="8">(G2P) Goverment to People</option>
+                      <option value="9">(P2P) People to Goverment</option>
+                      <option value="10">(Nirlaba) Donasi Sosisal</option>
+                      <option value="11">
+                        (PSO) Public Service Obligation
+                      </option>
+                      <option value="12">(BLU) Badan Layanan Umum</option>
+                    </select>
+                    <div class="form-feedback"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="mcc" class="form-label">MCC</label>
+                    <select
+                      id="mcc"
+                      class="form-control select2"
+                      name="mcc"
+                      data-value="mcc"
+                      data-placeholder="Pilih MCC"
+                      required
+                      disabled
+                    >
+                      <option value=""></option>
+                      <option value="1" selected>
+                        0742 - VETERINARY SERVICES
+                      </option>
+                      <option value="2">
+                        0763 - AGRICULTURAL CO-OPERATIVE
+                      </option>
+                      <option value="3">
+                        0780 - LANDSCAPING & HORTICULTURAL SERVICES
+                      </option>
+                      <option value="4">
+                        1520 - GENERAL CONTRACTORS - RESIDENTIAL & COMMERCIAL
+                      </option>
+                      <option value="5">
+                        1711 - HEATING, PLUMBING, & AIR CONDITIONING CONTRACTORS
+                      </option>
+                      <option value="6">1731 - ELECTRICAL CONTRACTORS</option>
+                      <option value="7">
+                        1740 - MASONRY, STONEWORK, TILE SETTING, PLASTERING &
+                        INSULATION CONTRACTORS
+                      </option>
+                      <option value="8">1750 - CARPENTRY CONTRACTORS</option>
+                      <option value="9">
+                        1761 - ROOFING, SIDING, AND SHEET METAL WORK CONTRANTORS
+                      </option>
+                      <option value="10">
+                        1771 - CONTRACTORS-CONCRETE WORK
+                      </option>
+                      <option value="11">
+                        1799 - SPECIAL TRADE CONTRACTORS (NOT ELSEWHERE
+                        CLASSIFIED)
+                      </option>
+                      <option value="12">
+                        2222 - OTHERS-NOT ELSEWHERE CLASSIFIED
+                      </option>
+                    </select>
+                    <div class="form-feedback"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion mb-4" id="detailKeterangan">
+              <div
+                class="card-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseKeterangan"
+                aria-expanded="true"
+                aria-controls="collapseKeterangan"
+              >
+                <h5 class="card-title">Keterangan</h5>
+              </div>
+              <div
+                id="collapseKeterangan"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#detailKeterangan"
+              >
+                <div class="accordion-body p-4 pt-0">
+                  <div class="form-group">
+                    <textarea
+                      name="keterangan"
+                      class="form-control"
+                      rows="4"
+                      placeholder="Masukkan keterangan"
+                      disabled
+                    >
+Dokumen telah memenuhi persyaratan</textarea
+                    >
+                    <div class="form-feedback"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion">
+              <div class="card-body">
+                <div
+                  class="d-flex flex-column flex-md-row row-gap-4 align-items-center justify-content-between"
+                >
+                  <p class="text-sm text-neutral-100">
+                    Periksa kelengkapan data sebelum melakukan persetujuan
+                  </p>
+                  <div
+                    class="d-flex align-items-center justify-content-center justify-content-md-end gap-4 col-12 col-md-4"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalReject"
+                    >
+                      Reject
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalConfirm"
+                    >
+                      Approve
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <div
+  class="modal fade"
+  id="modalConfirm"
+  tabindex="-1"
+  aria-labelledby="modalConfirmLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-notify">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="d-flex flex-column align-items-center py-4 gap-4">
+          <img src="img/ic-confirm.svg" alt="icon confirm" />
+          <div class="d-flex flex-column align-items-center gap-2">
+            <h3 class="text-neutral-100 fs-5 fw-bold mb-0">Approve Dokumen</h3>
+            <p class="text-neutral-70 text-sm text-center">
+              Data merchant akan dikirim ke Integration Officer untuk di proses
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer flex-row">
+        <button
+          class="btn btn-outline-base w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#modalConfirm"
+        >
+          Cancel
+        </button>
+        <button
+          class="btn btn-primary w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#modalSuccessApprove"
+        >
+          Approve
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+ <div
+  class="modal fade"
+  id="modalReject"
+  tabindex="-1"
+  aria-labelledby="modalRejectLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-notify">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="d-flex flex-column align-items-center py-4 gap-4">
+          <img src="img/ic-confirm.svg" alt="icon confirm" />
+          <div class="d-flex flex-column align-items-center gap-2">
+            <h3 class="text-neutral-100 fs-5 fw-bold mb-0">Reject Dokumen</h3>
+            <p class="text-neutral-70 text-sm text-center">
+              Dokumen yang direject akan dikirim kembali ke merchant
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer flex-row">
+        <button
+          class="btn btn-outline-base w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#modalReject"
+        >
+          Cancel
+        </button>
+        <button
+          class="btn btn-danger w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#modalSuccessReject"
+        >
+          Reject
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+ <div
+  class="modal fade"
+  id="modalSuccessApprove"
+  tabindex="-1"
+  aria-labelledby="modalSuccessApproveLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-fit">
+    <div class="modal-content">
+      <div class="modal-body px-5 py-4">
+        <div class="d-flex flex-column align-items-center gap-4">
+          <img src="img/ic-success.svg" alt="icon success" />
+          <h3 class="text-neutral-100 fs-7 fw-bold mb-0">
+            Berhasil di Approve
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <div
+  class="modal fade"
+  id="modalSuccessReject"
+  tabindex="-1"
+  aria-labelledby="modalSuccessRejectLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-fit">
+    <div class="modal-content">
+      <div class="modal-body px-5 py-4">
+        <div class="d-flex flex-column align-items-center gap-4">
+          <img src="img/ic-success.svg" alt="icon success" />
+          <h3 class="text-neutral-100 fs-7 fw-bold mb-0">Berhasil di Reject</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

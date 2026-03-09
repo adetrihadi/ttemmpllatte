@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Upload Bulk — Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <!-- <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" /> -->
+    </a>
+    <button
+      class="btn btn-link p-0"
+      data-toggle="sidebar"
+      data-target="#sidebar-dashboard"
+    >
+      <img src="img/ic-menu-bar.svg" alt="icon menu" />
+    </button>
+  </div>
+</nav>
+ <aside id="sidebar-dashboard" class="sidebar">
+  <div class="sidebar-group">
+    <div class="sidebar-header">
+      <div class="header-logo">
+        <!-- <img src="img/logo-fello-merchant-black.svg" alt="logo" /> -->
+      </div>
+      <div class="header-account">
+        <div class="account-initial" data-name="ADM"></div>
+        <!-- <img src="img/logo-brand.svg" class="account-logo" alt="logo brand" /> -->
+        <div class="account-content">
+          <h5 class="account-name">Administrator</h5>
+          <h5 class="account-id">Brand ID - 1819220041864</h5>
+        </div>
+      </div>
+      <div class="menu-notification">
+        <a href="notification.html" class="">
+          <div class="menu-notification-group">
+            <span class="icon-menu ic-notification"></span>
+            <span>Notifikasi</span>
+          </div>
+          <div class="menu-notification-badge">1</div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar-body">
+      <ul id="sidebarMenu" class="sidebar-menu-group">
+        <li class="menu-item">
+          <a href="dashboard.html">
+            <span class="icon-menu ic-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="home.html">
+            <span class="icon-menu ic-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="menu-item menu-tree">
+          <a
+            href="#"
+            aria-expanded="false"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuRcn"
+          >
+            <div class="d-flex align-items-center">
+              <span class="icon-menu ic-report"></span>
+              <span>Rekon PLN ID</span>
+            </div>
+            <span class="icon-menu ic-dropdown"></span>
+          </a>
+          <ul
+            id="menuRcn"
+            class="menu-item-collapse collapse"
+            data-bs-parent="#sidebarMenu"
+          >
+            <li>
+              <a href="ftr-pln-id.html">
+                <span class="icon-menu ic-circle"></span>
+                <span>FTR PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>RCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>FCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>SETTLEMENT</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>KIRIM EMAIL</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar-footer">
+    <div class="sidebar-footer-group">
+      <h5 class="account-user">Satria Bergetar</h5>
+      <span class="account-role">Individu</span>
+    </div>
+    <div class="btn-group dropup">
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img src="img/ic-dot-vertical.svg" alt="icon dot" />
+      </button>
+      <ul class="dropdown-menu dropdown-account-footer">
+        <li>
+          <a class="dropdown-item" href="user-profile.html">
+            <img src="img/ic-profile.svg" alt="profile" />
+            Profil Saya
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img src="img/ic-logout-sm.svg" alt="logout" />
+            Keluar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main class="main bg-soft-white">
+      <div class="content">
+        <div class="content-header">
+          <h1 class="header-title">Upload Bulk</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb with-arrow">
+              <li class="breadcrumb-item">
+                <a href="data-merchant.html">Data Merchant</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="data-information.html">Informasi Merchant</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="list-merchant.html">List Merchant</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Upload Bulk
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="content-body">
+          <div class="card mb-4" id="uploadBulk">
+            <div class="card-header">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 class="card-title fs-6">Upload File</h5>
+                <a
+                  href="csv/template-bulk.csv"
+                  class="text-sm text-primary text-end fw-medium"
+                >
+                  Download Template
+                </a>
+              </div>
+            </div>
+            <div class="accordion-collapse collapse show">
+              <div class="accordion-body p-4 pt-0">
+                <form
+                  id="upload-bulk-form"
+                  action=""
+                  method="POST"
+                  class="form form-validation gap-3"
+                  autocomplete="off"
+                >
+                  <div class="d-flex flex-column">
+                    <div class="form-group mt-1">
+                      <label for="documentBulk" class="input-file-box">
+                        <div
+                          class="input-file-icon p-0 border-0 bg-transparent"
+                        >
+                          <span class="placeholder-excel"></span>
+                        </div>
+                        <div class="input-file-detail">
+                          <h3 class="file-detail-title">Pilih file dokumen</h3>
+                          <p class="file-detail-subtitle">
+                            Maksimal 15Mb, format xlx, xlxs
+                          </p>
+                        </div>
+                        <input
+                          type="file"
+                          id="documentBulk"
+                          name="documentBulk"
+                          class="d-none"
+                          accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                          required
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div id="previewCsv" class="d-flex flex-column gap-4 d-none">
+            <div class="card">
+              <div class="card-header with-border">
+                <div class="flash-message-danger mb-4 d-none">
+                  <span class="message-body"></span>
+                </div>
+                <div class="d-flex flex-row gap-4">
+                  <div class="form-group">
+                    <select
+                      name=""
+                      id="lengthTablePreviewCsv"
+                      class="form-select"
+                      data-length="#tablePreviewCsv"
+                    >
+                      <option value="10">10</option>
+                      <option value="50">50</option>
+                      <option value="100">100</option>
+                    </select>
+                  </div>
+                  <div class="form-group flex-fill">
+                    <input
+                      id="searchTablePReviewCsv"
+                      type="text"
+                      class="form-control"
+                      data-search="#tablePreviewCsv"
+                      placeholder="Cari disini"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <table
+                  id="tablePreviewCsv"
+                  class="table table-hover no-border-top nowrap mb-0"
+                  width="100%"
+                >
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Nama</th>
+                      <th>No. Handphone</th>
+                      <th>Email</th>
+                      <th>Nama Usaha</th>
+                      <th>Nama Lengkap Pemilik</th>
+                      <th>Tempat Lahir</th>
+                      <th>Tanggal Lahir</th>
+                      <th>Nomor Handphone Pemilik</th>
+                      <th>Email Pemilik</th>
+                      <th>Jabatan</th>
+                      <th>Provinsi</th>
+                      <th>Kota/Kabupaten</th>
+                      <th>Kecamatan</th>
+                      <th>Kelurahan</th>
+                      <th>Alamat</th>
+                      <th>Nomor KTP (NIK)</th>
+                      <th>Badan Hukum</th>
+                      <th>Nama Perusahaan</th>
+                      <th>Nomor Handphone Perusahaan</th>
+                      <th>Provinsi</th>
+                      <th>Kota/Kabupaten</th>
+                      <th>Kecamatan</th>
+                      <th>Kelurahan</th>
+                      <th>Alamat</th>
+                      <th>Kategori Usaha</th>
+                      <th>Keterangan Usaha</th>
+                      <th>Situs Website/Sosial Media</th>
+                      <th>Layanan 1</th>
+                      <th>Layanan 2</th>
+                      <th>Layanan 3</th>
+                      <th>Layanan 4</th>
+                      <th>Layanan 5</th>
+                      <th>Nama Bank</th>
+                      <th>Nomor Rekening</th>
+                      <th>Nama Pemilik Rekening</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>Tomas Wiliam</td>
+                      <td>081234567890</td>
+                      <td>tomaswiliam@gmail.com</td>
+                      <td>Indonesia Maju</td>
+                      <td>Tomas Wiliam</td>
+                      <td>Jakarta</td>
+                      <td>22/06/1980</td>
+                      <td>081234567899</td>
+                      <td>tomaswiliam@gmail.com</td>
+                      <td>Pemilik</td>
+                      <td>DKI Jakarta</td>
+                      <td>Jakarta Selatan</td>
+                      <td>Kebayoran Baru</td>
+                      <td>Melawai</td>
+                      <td class="text-overflow">
+                        Jalan Sunan Kalijaga Blok K/5, No 63B, RT003 RW001
+                      </td>
+                      <td>1122334455667788</td>
+                      <td>PT (Perseroan Terbatas)</td>
+                      <td>Tomas Sentosa</td>
+                      <td>081234567888</td>
+                      <td>DKI Jakarta</td>
+                      <td>Jakarta Selatan</td>
+                      <td>Kebayoran Baru</td>
+                      <td>Melawai</td>
+                      <td class="text-overflow">
+                        Jalan Sunan Kalijaga Blok K/5, No 63B, RT003 RW001
+                      </td>
+                      <td>Usaha Kecil</td>
+                      <td>Lorem ipsum dolor sit amet</td>
+                      <td>www.tomassentosa.co.id</td>
+                      <td>Fello H2H</td>
+                      <td>Fellopay PG</td>
+                      <td>QRIS Dinamis</td>
+                      <td>QRIS Statis</td>
+                      <td>Transfer Bank</td>
+                      <td>Bank Mandiri</td>
+                      <td>1560008866554</td>
+                      <td>Tomas Wiliam</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="card card-accordion">
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                  <p class="text-sm text-neutral-100">
+                    Periksa kelengkapan data sebelum dikirim
+                  </p>
+                  <div class="d-flex align-items-center gap-4">
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      form="upload-bulk-form"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalConfirm"
+                    >
+                      Kirim Data Merchant
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript">
+      $(function () {
+        let inputFile;
+        let documentBulk = document.querySelector("#documentBulk");
+
+        documentBulk.addEventListener("change", function () {
+          inputFile = this.files[0];
+
+          app.PreviewCsv.read("#previewCsv", "#tablePreviewCsv", inputFile);
+        });
+
+        documentBulk.addEventListener("cancel", function () {
+          app.PreviewCsv.toggle("#previewCsv", false);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Data Merchant — Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <!-- <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" /> -->
+    </a>
+    <button
+      class="btn btn-link p-0"
+      data-toggle="sidebar"
+      data-target="#sidebar-dashboard"
+    >
+      <img src="img/ic-menu-bar.svg" alt="icon menu" />
+    </button>
+  </div>
+</nav>
+ <aside id="sidebar-dashboard" class="sidebar">
+  <div class="sidebar-group">
+    <div class="sidebar-header">
+      <div class="header-logo">
+        <!-- <img src="img/logo-fello-merchant-black.svg" alt="logo" /> -->
+      </div>
+      <div class="header-account">
+        <div class="account-initial" data-name="ADM"></div>
+        <!-- <img src="img/logo-brand.svg" class="account-logo" alt="logo brand" /> -->
+        <div class="account-content">
+          <h5 class="account-name">Administrator</h5>
+          <h5 class="account-id">Brand ID - 1819220041864</h5>
+        </div>
+      </div>
+      <div class="menu-notification">
+        <a href="notification.html" class="">
+          <div class="menu-notification-group">
+            <span class="icon-menu ic-notification"></span>
+            <span>Notifikasi</span>
+          </div>
+          <div class="menu-notification-badge">1</div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar-body">
+      <ul id="sidebarMenu" class="sidebar-menu-group">
+        <li class="menu-item">
+          <a href="dashboard.html">
+            <span class="icon-menu ic-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="home.html">
+            <span class="icon-menu ic-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="menu-item menu-tree">
+          <a
+            href="#"
+            aria-expanded="false"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuRcn"
+          >
+            <div class="d-flex align-items-center">
+              <span class="icon-menu ic-report"></span>
+              <span>Rekon PLN ID</span>
+            </div>
+            <span class="icon-menu ic-dropdown"></span>
+          </a>
+          <ul
+            id="menuRcn"
+            class="menu-item-collapse collapse"
+            data-bs-parent="#sidebarMenu"
+          >
+            <li>
+              <a href="ftr-pln-id.html">
+                <span class="icon-menu ic-circle"></span>
+                <span>FTR PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>RCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>FCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>SETTLEMENT</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>KIRIM EMAIL</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar-footer">
+    <div class="sidebar-footer-group">
+      <h5 class="account-user">Satria Bergetar</h5>
+      <span class="account-role">Individu</span>
+    </div>
+    <div class="btn-group dropup">
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img src="img/ic-dot-vertical.svg" alt="icon dot" />
+      </button>
+      <ul class="dropdown-menu dropdown-account-footer">
+        <li>
+          <a class="dropdown-item" href="user-profile.html">
+            <img src="img/ic-profile.svg" alt="profile" />
+            Profil Saya
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img src="img/ic-logout-sm.svg" alt="logout" />
+            Keluar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main class="main bg-soft-white">
+      <div class="content">
+        <div class="content-header">
+          <h1 class="header-title">Data Merchant</h1>
+          <p class="text-sm text-neutral-70 mt-1">
+            Kelola data informasi merchant
+          </p>
+        </div>
+        <div class="content-body">
+          <div class="card">
+            <div class="card-header with-border">
+              <div class="d-flex flex-wrap row-gap-4 mb-4">
+                <div class="d-flex flex-column flex-fill">
+                  <p class="text-neutral-100 fw-bold mb-1">
+                    Kirim data pendaftaran QRIS ke PTEN
+                  </p>
+                  <p class="text-xs text-neutral-70">
+                    Checklist data yang akan dikirim, klik generate CSV, lalu
+                    kirim ke PTEN
+                  </p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <button
+                    class="btn btn-outline-warning"
+                    data-toggle="modal"
+                    data-target="#modalLoading"
+                    data-title-target="Cek Status.."
+                    data-next-target="#modalResultPTEN"
+                  >
+                    Cek Status
+                  </button>
+                  <button
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#modalLoading"
+                    data-title-target="Loading.."
+                    data-next-target="#modalGenerate"
+                  >
+                    Generate CSV
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex flex-row gap-4">
+                <div class="form-group">
+                  <select
+                    name=""
+                    id=""
+                    class="form-select"
+                    data-length="tableMerchant"
+                  >
+                    <option value="10">10</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                </div>
+                <div class="form-group flex-fill">
+                  <input
+                    type="text"
+                    class="form-control"
+                    data-search="tableMerchant"
+                    placeholder="Cari disini"
+                  />
+                </div>
+                <div class="form-group">
+                  <div class="input-append append-right">
+                    <input
+                      type="text"
+                      name="date"
+                      class="form-control"
+                      placeholder="Masukkan tanggal"
+                      data-toggle="daterange"
+                      data-search-date="tableMerchant"
+                      data-search-index="2"
+                    />
+                    <div class="append-icon icon-calendar"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <select
+                    name=""
+                    id=""
+                    class="form-select"
+                    data-search-status="tableMerchant"
+                    data-search-index="4, 15"
+                  >
+                    <option value="">Semua</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Rejected">Rejected</option>
+                    <option value="Unregistered">Unregistered</option>
+                    <option value="Success">Success</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-primary dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Export
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <button
+                          id="exportCsvMerchant"
+                          class="dropdown-item"
+                          type="button"
+                        >
+                          CSV
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" type="button">
+                          Excel
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item" type="button">
+                          JSON
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <table
+                id="tableMerchant"
+                class="table table-hover no-border-top nowrap mb-0"
+                width="100%"
+              >
+                <thead>
+                  <tr>
+                    <th class="not-export"><!-- Data ID --></th>
+                    <th>No</th>
+                    <th>Last Action Date</th>
+                    <th>Role</th>
+                    <th>Status Data PTEN</th>
+                    <th>Jenis Bisnis</th>
+                    <th>Nama Merchant</th>
+                    <th>Merchant ID</th>
+                    <th>MPAN</th>
+                    <th>NMID</th>
+                    <th>Brand ID</th>
+                    <th>Nama</th>
+                    <th>No. Handphone</th>
+                    <th>Email</th>
+                    <th>Keterangan</th>
+                    <th>Status</th>
+                    <th class="not-export">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>320</td>
+                    <td></td>
+                    <td>20/09/2024 • 13:22</td>
+                    <td>
+                      <span class="dt-status status-privilage"> Reviewer </span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage">
+                        Unprocessed
+                      </span>
+                    </td>
+                    <td>Aggregator</td>
+                    <td>Merchant ABC</td>
+                    <td>Rp3.000,00</td>
+                    <td>9360082769111275376</td>
+                    <td>ID1024329134554</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>Registered</td>
+                    <td>
+                      <span class="dt-status status-progress">In Progress</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>321</td>
+                    <td></td>
+                    <td>19/09/2024 • 13:22</td>
+                    <td>
+                      <span class="dt-status status-privilage">
+                        Integ. Officer
+                      </span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage text-danger">
+                        Rejected
+                      </span>
+                    </td>
+                    <td>Badan Usaha</td>
+                    <td>Merchant XYZ</td>
+                    <td>Rp3.000,00</td>
+                    <td>9360082769111275376</td>
+                    <td>ID1024329134554</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>Registered</td>
+                    <td>
+                      <span class="dt-status status-failed">Rejected</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>322</td>
+                    <td></td>
+                    <td>18/09/2024 • 13:22</td>
+                    <td>
+                      <span class="dt-status status-privilage">
+                        Adm. Maker
+                      </span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage text-warning">
+                        Process
+                      </span>
+                    </td>
+                    <td>Individu</td>
+                    <td>Merchant FGH</td>
+                    <td>Rp3.000,00</td>
+                    <td>9360082769111275376</td>
+                    <td>ID1024329134554</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>Unregistered</td>
+                    <td>
+                      <span class="dt-status status-neutral">
+                        Unregistered
+                      </span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>323</td>
+                    <td></td>
+                    <td>17/09/2024 • 13:22</td>
+                    <td>
+                      <span class="dt-status status-privilage">
+                        Adm. Checker
+                      </span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage text-success">
+                        Done
+                      </span>
+                    </td>
+                    <td>Badan Usaha</td>
+                    <td>Merchant OPQ</td>
+                    <td>Rp3.000,00</td>
+                    <td>9360082769111275376</td>
+                    <td>ID1024329134554</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>Registered</td>
+                    <td>
+                      <span class="dt-status status-success">Success</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>324</td>
+                    <td></td>
+                    <td>16/09/2024 • 13:22</td>
+                    <td>
+                      <span class="dt-status status-privilage">
+                        Adm. Maker
+                      </span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage text-success">
+                        Done
+                      </span>
+                    </td>
+                    <td>Individu</td>
+                    <td>Merchant CVB</td>
+                    <td>Rp3.000,00</td>
+                    <td>9360082769111275376</td>
+                    <td>ID1024329134554</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>Registered</td>
+                    <td>
+                      <span class="dt-status status-success">Success</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>325</td>
+                    <td></td>
+                    <td>15/09/2024 • 13:22</td>
+                    <td>
+                      <span class="dt-status status-privilage">
+                        Adm. Maker
+                      </span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage text-success">
+                        Done
+                      </span>
+                    </td>
+                    <td>Individu</td>
+                    <td>Merchant 123</td>
+                    <td>Rp3.000,00</td>
+                    <td>9360082769111275376</td>
+                    <td>ID1024329134554</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>Registered</td>
+                    <td>
+                      <span class="dt-status status-success">Success</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>326</td>
+                    <td></td>
+                    <td>15/09/2024 • 13:22</td>
+                    <td>
+                      <span class="dt-status status-privilage"> Reviewer </span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage text-danger">
+                        Rejected
+                      </span>
+                    </td>
+                    <td>Individu</td>
+                    <td>Merchant 890</td>
+                    <td>Rp3.000,00</td>
+                    <td>9360082769111275376</td>
+                    <td>ID1024329134554</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>Registered</td>
+                    <td>
+                      <span class="dt-status status-failed">Rejected</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>327</td>
+                    <td></td>
+                    <td>15/09/2024 • 13:22</td>
+                    <td>
+                      <span class="dt-status status-privilage">
+                        Integ. Officer
+                      </span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage text-success">
+                        Done
+                      </span>
+                    </td>
+                    <td>Individu</td>
+                    <td>Merchant 567</td>
+                    <td>Rp3.000,00</td>
+                    <td>9360082769111275376</td>
+                    <td>ID1024329134554</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>Registered</td>
+                    <td>
+                      <span class="dt-status status-success">Success</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>328</td>
+                    <td></td>
+                    <td>15/09/2024 • 13:22</td>
+                    <td>
+                      <span class="dt-status status-privilage">
+                        Adm. Checker
+                      </span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage text-success">
+                        Done
+                      </span>
+                    </td>
+                    <td>Individu</td>
+                    <td>Merchant 333</td>
+                    <td>Rp3.000,00</td>
+                    <td>9360082769111275376</td>
+                    <td>ID1024329134554</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>Registered</td>
+                    <td>
+                      <span class="dt-status status-success">Success</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>329</td>
+                    <td></td>
+                    <td>14/09/2024 • 13:22</td>
+                    <td>
+                      <span class="dt-status status-privilage"> Reviewer </span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage">
+                        Unprocessed
+                      </span>
+                    </td>
+                    <td>Individu</td>
+                    <td>Merchant 111</td>
+                    <td>Rp3.000,00</td>
+                    <td>9360082769111275376</td>
+                    <td>ID1024329134554</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>Registered</td>
+                    <td>
+                      <span class="dt-status status-progress">In Progress</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>330</td>
+                    <td></td>
+                    <td>14/09/2024 • 13:22</td>
+                    <td>
+                      <span class="dt-status status-privilage">Reviewer</span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage text-success">
+                        Done
+                      </span>
+                    </td>
+                    <td>Individu</td>
+                    <td>Merchant GGG</td>
+                    <td>Rp3.000,00</td>
+                    <td>9360082769111275376</td>
+                    <td>ID1024329134554</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>Registered</td>
+                    <td>
+                      <span class="dt-status status-success">Success</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+  class="modal fade"
+  id="modalLoading"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="modalLoadingLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-fit">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="d-flex flex-column align-items-center gap-4 px-2 pt-2">
+          <span class="spinner-progress"></span>
+          <h3 id="modalLoadingTitle" class="text-neutral-100 fs-7 fw-bold mb-0">
+            Loading
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <div
+  class="modal fade"
+  id="modalSuccess"
+  tabindex="-1"
+  aria-labelledby="modalSuccessLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-fit">
+    <div class="modal-content">
+      <div class="modal-body px-5 py-4">
+        <div class="d-flex flex-column align-items-center gap-4">
+          <img src="img/ic-success.svg" alt="icon success" />
+          <div class="d-flex flex-column align-items-center gap-2">
+            <h3
+              id="modalSuccessTitle"
+              class="text-neutral-100 fs-7 fw-bold mb-0"
+            >
+              Data Berhasil
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div
+  class="modal fade"
+  id="modalGenerate"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="modalGenerateLabel"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">File Csv</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="send-csv-form" action="" method="POST" autocomplete="off">
+          <div class="form-content">
+            <div class="form-group form-preview">
+              <label for="filePendaftaranPTEN" class="input-file-box">
+                <span class="input-csv-preview"></span>
+                <div class="input-file-detail">
+                  <h3 class="file-detail-title">
+                    File Pendaftaran ke PTEN.csv
+                  </h3>
+                  <p class="text-neutral-70 file-detail-subtitle">100kb</p>
+                </div>
+                <input
+                  type="file"
+                  id="filePendaftaranPTEN"
+                  name="filePendaftaranPTEN"
+                  class="d-none"
+                  accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                  value=""
+                  required
+                  disabled
+                />
+              </label>
+              <div class="form-feedback"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="submit"
+          form="send-csv-form"
+          class="btn btn-primary w-100"
+          data-bs-dismiss="modal"
+        >
+          Kirim Data ke PTEN
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+ <div
+  class="modal fade"
+  id="modalResultPTEN"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="modalResultPTENLabel"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">File Hasil Pendaftaran</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          id="update-merchant-form"
+          action=""
+          method="POST"
+          autocomplete="off"
+        >
+          <div class="form-content">
+            <div class="form-group form-preview">
+              <label for="filePendaftaranPTEN" class="input-file-box">
+                <div class="d-flex flex-column gap-2 flex-fill">
+                  <div class="d-flex flex-row gap-3">
+                    <span class="input-zip-preview"></span>
+                    <div class="input-file-detail">
+                      <h3 class="file-detail-title">QRIS_NMR.zip</h3>
+                      <p class="text-neutral-70 file-detail-subtitle">100kb</p>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row gap-3">
+                    <span class="input-xls-preview"></span>
+                    <div class="input-file-detail">
+                      <h3 class="file-detail-title">NMID_QRIS_NMR.xlxs</h3>
+                      <p class="text-neutral-70 file-detail-subtitle">100kb</p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  id="downloadResult"
+                  type="button"
+                  class="btn btn-sm btn-flex bg-white"
+                  data-target="update-merchant-form"
+                >
+                  Download
+                </button>
+              </label>
+              <div class="form-feedback"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="submit"
+          form="update-merchant-form"
+          class="btn btn-primary w-100"
+          data-bs-dismiss="modal"
+          disabled
+        >
+          Update Data Merchant
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script type="text/javascript">
+      $(function () {
+        // Config Table
+        let tableMerchant = $("#tableMerchant").DataTable({
+          dom: '<"dataTables_top">rt<"dataTables_bottom"ip><"clear">',
+          deferRender: false,
+          order: [[0, "asc"]],
+          fixedColumns: {
+            start: 0,
+            end: 2,
+          },
+          columnDefs: [
+            {
+              orderable: false,
+              targets: 0,
+              checkboxes: {
+                selectRow: true,
+              },
+              render: function (data, type, row, meta) {
+                if (type === "display") {
+                  let isAddCheckbox = row.some((item) => {
+                    let text = app.stripHtmlTags(item).toLowerCase();
+                    return (
+                      text.includes("unprocessed") || text.includes("rejected")
+                    );
+                  });
+
+                  data = `<div class="checkbox"><input type="checkbox" name="merchant_id[]" class="dt-checkboxes ${
+                    isAddCheckbox ? "" : "d-none disabled"
+                  }" value="${data}"></div>`;
+                }
+
+                return data;
+              },
+              createdCell: function (td, cellData, rowData, row, col) {
+                let isAddCheckbox = rowData.some((item) => {
+                  let text = app.stripHtmlTags(item).toLowerCase();
+                  return (
+                    text.includes("unprocessed") || text.includes("rejected")
+                  );
+                });
+
+                if (!isAddCheckbox) {
+                  setTimeout(() => {
+                    this.api().cell(td).checkboxes.disable();
+                  }, 200);
+                }
+              },
+            },
+          ],
+          select: {
+            style: "multi",
+            info: false,
+          },
+          buttons: [
+            {
+              extend: "csvHtml5",
+              title: "Data Merchant - Merchant Portal",
+              exportOptions: {
+                columns: ":not(.not-export)",
+              },
+            },
+          ],
+        });
+        tableMerchant
+          .on("order.dt search.dt", function () {
+            let i = 1;
+
+            tableMerchant
+              .cells(null, 1, {
+                search: "applied",
+                order: "applied",
+              })
+              .every(function (cell) {
+                this.data(i++);
+              });
+          })
+          .draw();
+        tableMerchant.on("user-select", function (e, _, _, cell, _) {
+          let actionColumn = cell[0][0].column;
+          let columnLength = tableMerchant.row(cell.node()).data().length - 1;
+          let data = tableMerchant.row(cell.node()).data();
+
+          if (actionColumn == columnLength) {
+            e.preventDefault();
+          }
+        });
+
+        app.CustomFilterDT.init();
+
+        $("#exportCsvMerchant").on("click", function () {
+          tableMerchant.button(".buttons-csv").trigger();
+        });
+        // End Config
+
+        $('[data-toggle="modal"]').on("click", function () {
+          const target = $(this).attr("data-target");
+          const titleTarget = $(this).attr("data-title-target");
+          const nextTarget = $(this).attr("data-next-target");
+          const modalLoadingGenerate = new bootstrap.Modal(target);
+          const modalGenerate = new bootstrap.Modal(nextTarget);
+
+          $(target).find("#modalLoadingTitle").text(titleTarget);
+          modalLoadingGenerate.show();
+
+          setTimeout(() => {
+            modalLoadingGenerate.hide();
+            modalGenerate.show();
+          }, 3000);
+        });
+
+        $("#downloadResult").on("click", function () {
+          const target = $(this).attr("data-target");
+
+          $(`.btn[form=${target}]`).prop("disabled", false);
+        });
+
+        $("#send-csv-form").on("submit", function (e) {
+          e.preventDefault();
+
+          const modalSuccess = new bootstrap.Modal("#modalSuccess");
+
+          $("#modalSuccess")
+            .find("#modalSuccessTitle")
+            .text("Data Berhasil Dikirim");
+          modalSuccess.show();
+        });
+
+        $("#update-merchant-form").on("submit", function (e) {
+          e.preventDefault();
+
+          const modalSuccess = new bootstrap.Modal("#modalSuccess");
+
+          $("#modalSuccess")
+            .find("#modalSuccessTitle")
+            .text("Data Berhasil Diupdate");
+          modalSuccess.show();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" />
+    </a>
+  </div>
+</nav>
+
+    <main class="main">
+      <div class="auth-side-cover">
+        <img
+          src="img/logo-fello-merchant-white.svg"
+          alt="logo fello merchant"
+        />
+      </div>
+      <div class="auth-side-form justify-content-start gap-2">
+        <div
+          class="d-flex align-items-center justify-content-end gap-2 w-100 mb-md-4"
+        >
+          <span class="text-sm text-neutral-70">Sudah memiliki akun?</span>
+          <a href="index.html" class="btn btn-outline-primary">Masuk</a>
+        </div>
+        <form
+          id="register-form"
+          action="verify.html?type=register"
+          method="POST"
+          class="form form-validation"
+          autocomplete="off"
+        >
+          <div class="form-header">
+            <h1 class="form-header-title">Pendaftaran Akun</h1>
+            <p class="form-header-description">
+              Lengkapi data dibawah ini untuk membuat akun baru
+            </p>
+          </div>
+          <div class="form-content">
+            <div class="form-group">
+              <label for="name" class="form-label">Nama Lengkap</label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Masukkan nama lengkap"
+                required
+              />
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="businessName" class="form-label">Nama Usaha</label>
+              <input
+                id="businessName"
+                type="text"
+                name="businessName"
+                class="form-control"
+                placeholder="Masukkan nama usaha"
+                required
+              />
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="Masukkan email"
+                required
+              />
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber" class="form-label"
+                >Nomor Handphone</label
+              >
+              <div class="input-group">
+                <span class="input-group-text" id="phone-addon">+62</span>
+                <input
+                  id="phoneNumber"
+                  type="tel"
+                  name="phoneNumber"
+                  class="form-control"
+                  placeholder="Masukkan nomor handphone"
+                  aria-describedby="phone-addon"
+                  required
+                />
+              </div>
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="form-label">Password</label>
+              <div class="input-append append-right">
+                <input
+                  id="password"
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  placeholder="Masukkan password"
+                  required
+                />
+                <div
+                  class="append-icon icon-password"
+                  data-toggle="password"
+                ></div>
+              </div>
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword" class="form-label"
+                >Konfirmasi Password</label
+              >
+              <div class="input-append append-right">
+                <input
+                  id="confirmPassword"
+                  type="password"
+                  name="confirmPassword"
+                  class="form-control validate"
+                  placeholder="Masukkan password"
+                  required
+                />
+                <div
+                  class="append-icon icon-password"
+                  data-toggle="password"
+                ></div>
+              </div>
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="codeReferral" class="form-label"
+                >Kode Referral (opsional)</label
+              >
+              <input
+                id="codeReferral"
+                type="text"
+                name="codeReferral"
+                class="form-control"
+                placeholder="Masukkan kode referral"
+              />
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <p class="text-xs text-dark-70 fw-light text-center leading-5">
+                Dengan melakukan pendaftaran, saya menyetujui semua
+                <a href="#" class="text-primary fw-bold">Syarat & Ketentuan</a>
+                serta
+                <a href="#" class="text-primary fw-bold">Kebijakan Privasi</a>
+              </p>
+            </div>
+          </div>
+          <div class="form-footer">
+            <button
+              type="submit"
+              class="btn btn-primary btn-full w-full"
+              disabled
+            >
+              Daftar Akun
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script type="text/javascript">
+      $(function () {
+        app.FormValidation.init("#register-form");
+      });
+    </script>
+  </body>
+</html>

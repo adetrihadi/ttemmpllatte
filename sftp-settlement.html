@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>SFTP Setllement — Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <!-- <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" /> -->
+    </a>
+    <button
+      class="btn btn-link p-0"
+      data-toggle="sidebar"
+      data-target="#sidebar-dashboard"
+    >
+      <img src="img/ic-menu-bar.svg" alt="icon menu" />
+    </button>
+  </div>
+</nav>
+ <aside id="sidebar-dashboard" class="sidebar">
+  <div class="sidebar-group">
+    <div class="sidebar-header">
+      <div class="header-logo">
+        <!-- <img src="img/logo-fello-merchant-black.svg" alt="logo" /> -->
+      </div>
+      <div class="header-account">
+        <div class="account-initial" data-name="ADM"></div>
+        <!-- <img src="img/logo-brand.svg" class="account-logo" alt="logo brand" /> -->
+        <div class="account-content">
+          <h5 class="account-name">Administrator</h5>
+          <h5 class="account-id">Brand ID - 1819220041864</h5>
+        </div>
+      </div>
+      <div class="menu-notification">
+        <a href="notification.html" class="">
+          <div class="menu-notification-group">
+            <span class="icon-menu ic-notification"></span>
+            <span>Notifikasi</span>
+          </div>
+          <div class="menu-notification-badge">1</div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar-body">
+      <ul id="sidebarMenu" class="sidebar-menu-group">
+        <li class="menu-item">
+          <a href="dashboard.html">
+            <span class="icon-menu ic-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="home.html">
+            <span class="icon-menu ic-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="menu-item menu-tree">
+          <a
+            href="#"
+            aria-expanded="false"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuRcn"
+          >
+            <div class="d-flex align-items-center">
+              <span class="icon-menu ic-report"></span>
+              <span>Rekon PLN ID</span>
+            </div>
+            <span class="icon-menu ic-dropdown"></span>
+          </a>
+          <ul
+            id="menuRcn"
+            class="menu-item-collapse collapse"
+            data-bs-parent="#sidebarMenu"
+          >
+            <li>
+              <a href="ftr-pln-id.html">
+                <span class="icon-menu ic-circle"></span>
+                <span>FTR PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>RCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>FCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>SETTLEMENT</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>KIRIM EMAIL</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar-footer">
+    <div class="sidebar-footer-group">
+      <h5 class="account-user">Satria Bergetar</h5>
+      <span class="account-role">Individu</span>
+    </div>
+    <div class="btn-group dropup">
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img src="img/ic-dot-vertical.svg" alt="icon dot" />
+      </button>
+      <ul class="dropdown-menu dropdown-account-footer">
+        <li>
+          <a class="dropdown-item" href="user-profile.html">
+            <img src="img/ic-profile.svg" alt="profile" />
+            Profil Saya
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img src="img/ic-logout-sm.svg" alt="logout" />
+            Keluar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main class="main bg-soft-white">
+      <div class="content">
+        <div class="content-header">
+          <h1 class="header-title">SFTP Setllement</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb with-arrow">
+              <li class="breadcrumb-item">
+                <a href="data-merchant.html">Data Merchant</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                SFTP Setllement
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="content-body">
+          <div class="card card-background mb-4">
+            <div class="card-body">
+              <div
+                class="d-flex flex-column flex-lg-row justify-content-between row-gap-4"
+              >
+                <div class="d-flex flex-column flex-fill">
+                  <h3 class="fs-5 font-bold text-white">Samantha Putri</h3>
+                  <p class="text-sm text-white fw-medium">
+                    Brand ID - 20092024140021
+                  </p>
+                </div>
+                <div
+                  class="d-flex flex-column justify-content-between flex-fill row-gap-2"
+                >
+                  <div
+                    class="d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <p class="d-none d-md-block text-sm text-white fw-medium">
+                      Email
+                    </p>
+                    <p class="text-sm text-white fw-medium">
+                      samanthaputri@gmail.com
+                    </p>
+                  </div>
+                  <div class="divider"></div>
+                  <div
+                    class="d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <p class="d-none d-md-block text-sm text-white fw-medium">
+                      Nomor Handphone
+                    </p>
+                    <p class="text-sm text-white fw-medium">081234567890</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-accordion mb-4" id="detailBankAccount">
+            <div
+              class="card-header"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseDetailBankAccount"
+              aria-expanded="true"
+              aria-controls="collapseDetailBankAccount"
+            >
+              <h5 class="card-title">Rekening Bank</h5>
+            </div>
+            <div
+              id="collapseDetailBankAccount"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#detailBankAccount"
+            >
+              <div class="accordion-body p-4 pt-0">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">Nama Bank</p>
+                      <p class="fw-medium text-neutral-100 text-end">
+                        Bank Mandiri
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">MCC</p>
+                      <p class="fw-medium text-neutral-100 text-end">
+                        1260012221528
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">Nama Pemilik</p>
+                      <p class="fw-medium text-neutral-100 text-end">
+                        Jatelindo Perkasa Abadi
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card card-accordion mb-4" id="detailSFTPSettlement">
+            <div
+              class="card-header"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseDetailSFTP"
+              aria-expanded="true"
+              aria-controls="collapseDetailSFTP"
+            >
+              <h5 class="card-title">SFTP Settlement</h5>
+            </div>
+            <div
+              id="collapseDetailSFTP"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#detailSFTPSettlement"
+            >
+              <div class="accordion-body p-4 pt-0">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">Host</p>
+                      <p class="fw-medium text-neutral-100 text-end">
+                        sftp1.jatelindo.co.id
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">Directory</p>
+                      <p class="fw-medium text-neutral-100 text-end">
+                        202.152.22.117
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">Username</p>
+                      <p class="fw-medium text-neutral-100 text-end">
+                        fellopay
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">Password</p>
+                      <div
+                        class="d-flex flex-row align-items-center gap-2 position-relative"
+                      >
+                        <p
+                          id="passwordSftp"
+                          class="fw-medium text-neutral-100 text-end"
+                        >
+                          testing123
+                        </p>
+                        <div
+                          class="icon-password user-select-none"
+                          data-toggle="hide-password"
+                          data-target="passwordSftp"
+                        ></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">Port</p>
+                      <p class="fw-medium text-neutral-100 text-end">22</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card card-accordion">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <p class="text-sm text-neutral-100">
+                  Periksa kelengkapan data sebelum melakukan persetujuan
+                </p>
+                <div class="d-flex align-items-center gap-4">
+                  <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalConfirm"
+                  >
+                    Complete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      class="modal fade"
+      id="modalDeactive"
+      tabindex="-1"
+      aria-labelledby="modalDeactiveLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-notify">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="d-flex flex-column align-items-center py-4 gap-4">
+              <img src="img/ic-confirm.svg" alt="icon confirm" />
+              <div class="d-flex flex-column align-items-center gap-2">
+                <h3 class="text-neutral-100 fs-5 fw-bold mb-0">
+                  Deaktivasi QRIS Statis MPM
+                </h3>
+                <p class="text-neutral-70 text-sm text-center">
+                  Layanan akan jadi not active setelah di approve oleh Checker
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer flex-row">
+            <button
+              class="btn btn-outline-base w-100"
+              data-bs-toggle="modal"
+              data-bs-target="#modalDeactive"
+            >
+              Cancel
+            </button>
+            <button
+              class="btn btn-danger w-100"
+              data-bs-toggle="modal"
+              data-bs-target="#modalSuccessDeactive"
+            >
+              Deactivate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalActivate"
+      tabindex="-1"
+      aria-labelledby="modalActivateLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-notify">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="d-flex flex-column align-items-center py-4 gap-4">
+              <img src="img/ic-confirm.svg" alt="icon confirm" />
+              <div class="d-flex flex-column align-items-center gap-2">
+                <h3 class="text-neutral-100 fs-5 fw-bold mb-0">
+                  Aktivasi Fello H2H
+                </h3>
+                <p class="text-neutral-70 text-sm text-center">
+                  Status merchant akan active setelah di approve oleh Checker
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer flex-row">
+            <button
+              class="btn btn-outline-base w-100"
+              data-bs-toggle="modal"
+              data-bs-target="#modalActivate"
+            >
+              Cancel
+            </button>
+            <button
+              class="btn btn-primary w-100"
+              data-bs-toggle="modal"
+              data-bs-target="#modalSuccessActivate"
+            >
+              Activate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

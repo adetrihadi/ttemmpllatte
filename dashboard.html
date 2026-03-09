@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Dashboard — Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <!-- <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" /> -->
+    </a>
+    <button
+      class="btn btn-link p-0"
+      data-toggle="sidebar"
+      data-target="#sidebar-dashboard"
+    >
+      <img src="img/ic-menu-bar.svg" alt="icon menu" />
+    </button>
+  </div>
+</nav>
+ <aside id="sidebar-dashboard" class="sidebar">
+  <div class="sidebar-group">
+    <div class="sidebar-header">
+      <div class="header-logo">
+        <!-- <img src="img/logo-fello-merchant-black.svg" alt="logo" /> -->
+      </div>
+      <div class="header-account">
+        <div class="account-initial" data-name="ADM"></div>
+        <!-- <img src="img/logo-brand.svg" class="account-logo" alt="logo brand" /> -->
+        <div class="account-content">
+          <h5 class="account-name">Administrator</h5>
+          <h5 class="account-id">Brand ID - 1819220041864</h5>
+        </div>
+      </div>
+      <div class="menu-notification">
+        <a href="notification.html" class="">
+          <div class="menu-notification-group">
+            <span class="icon-menu ic-notification"></span>
+            <span>Notifikasi</span>
+          </div>
+          <div class="menu-notification-badge">1</div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar-body">
+      <ul id="sidebarMenu" class="sidebar-menu-group">
+        <li class="menu-item">
+          <a href="dashboard.html">
+            <span class="icon-menu ic-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="home.html">
+            <span class="icon-menu ic-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="menu-item menu-tree">
+          <a
+            href="#"
+            aria-expanded="false"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuRcn"
+          >
+            <div class="d-flex align-items-center">
+              <span class="icon-menu ic-report"></span>
+              <span>Rekon PLN ID</span>
+            </div>
+            <span class="icon-menu ic-dropdown"></span>
+          </a>
+          <ul
+            id="menuRcn"
+            class="menu-item-collapse collapse"
+            data-bs-parent="#sidebarMenu"
+          >
+            <li>
+              <a href="ftr-pln-id.html">
+                <span class="icon-menu ic-circle"></span>
+                <span>FTR PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>RCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>FCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>SETTLEMENT</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>KIRIM EMAIL</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar-footer">
+    <div class="sidebar-footer-group">
+      <h5 class="account-user">Satria Bergetar</h5>
+      <span class="account-role">Individu</span>
+    </div>
+    <div class="btn-group dropup">
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img src="img/ic-dot-vertical.svg" alt="icon dot" />
+      </button>
+      <ul class="dropdown-menu dropdown-account-footer">
+        <li>
+          <a class="dropdown-item" href="user-profile.html">
+            <img src="img/ic-profile.svg" alt="profile" />
+            Profil Saya
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img src="img/ic-logout-sm.svg" alt="logout" />
+            Keluar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main class="main bg-soft-white">
+      <div class="content">
+        <div class="content-header">
+          <h1 class="header-title">Rangkuman Hari Ini</h1>
+        </div>
+        <div class="content-body">
+          <div class="d-flex align-content-around flex-wrap gap-4 mb-4">
+            <div class="card card-summary justify-content-between">
+              <h5 class="summary-title">Total Transaksi</h5>
+              <h1 class="summary-value">10</h1>
+              <div class="summary-progress">
+                <div
+                  class="progress"
+                  data-success="7"
+                  data-pending="2"
+                  data-failed="1"
+                ></div>
+              </div>
+            </div>
+            <div class="card card-summary justify-content-between">
+              <div class="d-flex flex-row gap-1">
+                <h5 class="summary-title">Total Pendapatan</h5>
+                <span
+                  class="ic ic-information"
+                  data-bs-toggle="tooltip"
+                  data-bs-custom-class="custom-tooltip"
+                  data-bs-title="Pendapatan dari transaksi sukses, belum dipotong biaya MDR"
+                ></span>
+              </div>
+              <div class="d-flex align-items-end justify-content-between">
+                <h1 class="summary-value">Rp70.000</h1>
+                <img
+                  src="img/ic-total-pendapatan.svg"
+                  alt="icon total pendapatan"
+                />
+              </div>
+            </div>
+            <div class="card card-summary justify-content-between">
+              <div class="d-flex flex-row gap-1">
+                <h5 class="summary-title">Unsettle</h5>
+                <span
+                  class="ic ic-information"
+                  data-bs-toggle="tooltip"
+                  data-bs-custom-class="custom-tooltip"
+                  data-bs-title="Dana yang akan ditransfer ke rekening bank "
+                ></span>
+              </div>
+              <div class="d-flex align-items-end justify-content-between">
+                <h1 class="summary-value">Rp100.000</h1>
+                <img src="img/ic-transfer-berikutnya.svg" alt="icon transfer" />
+              </div>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-header">
+              <div class="d-flex flex-row align-items-center gap-4">
+                <div class="d-flex flex-fill">
+                  <h5 class="card-title">Total Pendapatan</h5>
+                </div>
+                <div class="form-group">
+                  <div class="input-append append-right">
+                    <input
+                      id="filterDateTotalIncome"
+                      type="text"
+                      name="daterangeIncome"
+                      class="form-control"
+                      placeholder="Masukkan tanggal"
+                      data-toggle="daterangefull"
+                      data-target="chartTotalIncome"
+                    />
+                    <div class="append-icon icon-calendar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-4 pt-0">
+              <div class="chart-container chart-income mb-3">
+                <canvas id="chartTotalIncome"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="d-flex flex-row align-items-center gap-4">
+                <div class="d-flex flex-fill">
+                  <h5 class="card-title">Total Transaksi</h5>
+                </div>
+                <div class="form-group">
+                  <div class="input-append append-right">
+                    <input
+                      id="filterDateTotalTransaction"
+                      type="text"
+                      name="date"
+                      class="form-control"
+                      placeholder="Masukkan tanggal"
+                      data-toggle="daterangefull"
+                      data-target="chartTotalTransaction"
+                    />
+                    <div class="append-icon icon-calendar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body px-4 pt-0">
+              <div class="chart-container chart-transaction mb-3">
+                <canvas id="chartTotalTransaction"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript">
+      $(function () {
+        InitChartTotalTransaction();
+        InitChartTotalIncome();
+
+        $("input[data-toggle=daterangefull]").each(function () {
+          let extConfig = $(this).data("daterangepicker");
+
+          if (extConfig) {
+            $(this)
+              .daterangepicker("destroy")
+              .daterangepicker({
+                ...extConfig,
+                maxSpan: {
+                  days: 90,
+                },
+              });
+          }
+        });
+
+        $("input[data-toggle=daterangefull]").on(
+          "apply.daterangepicker",
+          function (_, picker) {
+            let labelData = app.GenerateDate.generateLabels(
+              picker.startDate,
+              picker.endDate
+            );
+            let targetChart = $(this).attr("data-target");
+
+            if (targetChart == "chartTotalIncome") {
+              updateChartIncome(labelData);
+            } else if (targetChart == "chartTotalTransaction") {
+              updateChartTransaction(labelData);
+            }
+          }
+        );
+      });
+
+      function updateChartIncome(data) {
+        const chartTotalIncome = Chart.getChart("chartTotalIncome");
+
+        chartTotalIncome.data.labels = data;
+        chartTotalIncome.data.datasets[0].data =
+          app.GenerateDate.generateSampleData(data.length, 1000000);
+        chartTotalIncome.options.scales.y.suggestedMax =
+          Math.max(data.length) * 1.1;
+
+        chartTotalIncome.update();
+      }
+
+      function updateChartTransaction(data) {
+        const chartTotalTransaction = Chart.getChart("chartTotalTransaction");
+
+        chartTotalTransaction.data.labels = data;
+        chartTotalTransaction.data.datasets[0].data =
+          app.GenerateDate.generateSampleData(data.length);
+        chartTotalTransaction.data.datasets[1].data =
+          app.GenerateDate.generateSampleData(data.length);
+        chartTotalTransaction.data.datasets[2].data =
+          app.GenerateDate.generateSampleData(data.length);
+        chartTotalTransaction.options.scales.y.suggestedMax =
+          Math.max(data.length) * 1.1;
+
+        chartTotalTransaction.update();
+      }
+
+      function InitChartTotalIncome() {
+        let dataLabel = app.GenerateDate.generateHourlyLabels(new Date());
+        let dataIncome = [
+          0, 0, 0, 0, 0, 0, 0, 10000, 20000, 20000, 30000, 40000, 50000, 55000,
+          60000, 70000, 80000, 90000, 10000, 0, 0, 0, 0, 0, 0,
+        ];
+
+        const datachartTotalIncome = {
+          labels: dataLabel,
+          datasets: [
+            {
+              label: "Total Pendapatan",
+              data: dataIncome,
+              borderColor: "#3A7BF6",
+              backgroundColor: "#3A7BF6",
+              pointHoverBorderWidth: 4,
+              pointHoverBorderColor: "#FFFFFF",
+              pointHoverRadius: 8,
+              borderWidth: 2.5,
+              tension: 0,
+            },
+          ],
+        };
+
+        const chartTotalIncome = new Chart(
+          document.getElementById("chartTotalIncome"),
+          {
+            type: "line",
+            data: datachartTotalIncome,
+            options: {
+              locale: "id-ID",
+              scales: {
+                x: {
+                  grid: {
+                    display: false,
+                  },
+                },
+                y: {
+                  min: 0,
+                  beginAtZero: true,
+                  suggestedMax: Math.max(...dataIncome) * 1.1,
+                  ticks: {
+                    maxRotation: 0,
+                    autoSkip: true,
+                    callback: app.callbackTicksCurrency,
+                  },
+                  border: {
+                    display: false,
+                    dash: [5, 5],
+                    dashOffset: 5,
+                  },
+                },
+              },
+              plugins: {
+                legend: {
+                  display: false,
+                },
+                tooltip: {
+                  position: "average",
+                  enabled: false,
+                  external: app.ExternalTooltipHandler,
+                  callbacks: app.callbackLablesCurrency,
+                },
+              },
+              ...app.defaultChartOptions,
+            },
+            plugins: [app.tooltipLine],
+          }
+        );
+      }
+
+      function InitChartTotalTransaction() {
+        let dataLabel = [];
+        let dataDefault = 0;
+
+        for (let i = dataDefault; i < 24; i++) {
+          dataLabel.push(i < 10 ? `0${i}:00` : `${i}:00`);
+        }
+
+        let dataSukses = [
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 8, 5, 5, 6, 5, 4, 5, 7, 0, 0,
+          0,
+        ];
+        let dataPending = [
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0,
+        ];
+        let dataGagal = [
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0,
+        ];
+
+        const datachartTotalTransaction = {
+          labels: dataLabel,
+          datasets: [
+            {
+              label: "Sukses",
+              data: dataSukses,
+              borderColor: "#21B531",
+              backgroundColor: "#21B531",
+              pointHoverBorderWidth: 4,
+              pointHoverBorderColor: "#FFFFFF",
+              pointHoverRadius: 8,
+              borderWidth: 2.5,
+              tension: 0,
+            },
+            {
+              label: "Pending",
+              data: dataPending,
+              borderColor: "#FFA700",
+              backgroundColor: "#FFA700",
+              pointHoverBorderWidth: 4,
+              pointHoverBorderColor: "#FFFFFF",
+              pointHoverRadius: 8,
+              borderWidth: 2.5,
+              tension: 0,
+            },
+            {
+              label: "Gagal",
+              data: dataGagal,
+              borderColor: "#EB5757",
+              backgroundColor: "#EB5757",
+              pointHoverBorderWidth: 4,
+              pointHoverBorderColor: "#FFFFFF",
+              pointHoverRadius: 8,
+              borderWidth: 2.5,
+              tension: 0,
+            },
+          ],
+        };
+
+        const chartTotalTransaction = new Chart(
+          document.getElementById("chartTotalTransaction"),
+          {
+            type: "line",
+            data: datachartTotalTransaction,
+            options: {
+              scales: {
+                x: {
+                  grid: {
+                    display: false,
+                  },
+                },
+                y: {
+                  min: 0,
+                  beginAtZero: true,
+                  suggestedMax: Math.max(...dataSukses) * 1.1,
+                  ticks: {
+                    maxRotation: 0,
+                    autoSkip: true,
+                  },
+                  border: {
+                    display: false,
+                    dash: [5, 5],
+                    dashOffset: 5,
+                  },
+                },
+              },
+              plugins: {
+                legend: {
+                  display: false,
+                },
+                tooltip: {
+                  position: "average",
+                  enabled: false,
+                  external: app.ExternalTooltipHandler,
+                },
+              },
+              ...app.defaultChartOptions,
+            },
+            plugins: [app.tooltipLine],
+          }
+        );
+      }
+    </script>
+  </body>
+</html>

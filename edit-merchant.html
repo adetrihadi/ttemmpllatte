@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Detail Dokumen — Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <!-- <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" /> -->
+    </a>
+    <button
+      class="btn btn-link p-0"
+      data-toggle="sidebar"
+      data-target="#sidebar-dashboard"
+    >
+      <img src="img/ic-menu-bar.svg" alt="icon menu" />
+    </button>
+  </div>
+</nav>
+<aside id="sidebar-dashboard" class="sidebar">
+  <div class="sidebar-group">
+    <div class="sidebar-header">
+      <div class="header-logo">
+        <!-- <img src="img/logo-fello-merchant-black.svg" alt="logo" /> -->
+      </div>
+      <div class="header-account">
+        <div class="account-initial" data-name="ADM"></div>
+        <!-- <img src="img/logo-brand.svg" class="account-logo" alt="logo brand" /> -->
+        <div class="account-content">
+          <h5 class="account-name">Administrator</h5>
+          <h5 class="account-id">Brand ID - 1819220041864</h5>
+        </div>
+      </div>
+      <div class="menu-notification">
+        <a href="notification.html" class="">
+          <div class="menu-notification-group">
+            <span class="icon-menu ic-notification"></span>
+            <span>Notifikasi</span>
+          </div>
+          <div class="menu-notification-badge">1</div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar-body">
+      <ul id="sidebarMenu" class="sidebar-menu-group">
+        <li class="menu-item">
+          <a href="dashboard.html">
+            <span class="icon-menu ic-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="home.html">
+            <span class="icon-menu ic-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="menu-item menu-tree">
+          <a
+            href="#"
+            aria-expanded="false"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuRcn"
+          >
+            <div class="d-flex align-items-center">
+              <span class="icon-menu ic-report"></span>
+              <span>Rekon PLN ID</span>
+            </div>
+            <span class="icon-menu ic-dropdown"></span>
+          </a>
+          <ul
+            id="menuRcn"
+            class="menu-item-collapse collapse"
+            data-bs-parent="#sidebarMenu"
+          >
+            <li>
+              <a href="ftr-pln-id.html">
+                <span class="icon-menu ic-circle"></span>
+                <span>FTR PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>RCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>FCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>SETTLEMENT</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>KIRIM EMAIL</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar-footer">
+    <div class="sidebar-footer-group">
+      <h5 class="account-user">Satria Bergetar</h5>
+      <span class="account-role">Individu</span>
+    </div>
+    <div class="btn-group dropup">
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img src="img/ic-dot-vertical.svg" alt="icon dot" />
+      </button>
+      <ul class="dropdown-menu dropdown-account-footer">
+        <li>
+          <a class="dropdown-item" href="user-profile.html">
+            <img src="img/ic-profile.svg" alt="profile" />
+            Profil Saya
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img src="img/ic-logout-sm.svg" alt="logout" />
+            Keluar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main class="main bg-soft-white">
+      <div class="content">
+        <div class="content-header">
+          <h1 class="header-title">Detail Dokumen</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb with-arrow">
+              <li class="breadcrumb-item">
+                <a href="data-merchant.html">Data Merchant</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Detail Dokumen
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="content-body">
+          <form class="form gap-0">
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <div
+                  class="d-flex align-items-center justify-content-between p-4"
+                >
+                  <div class="d-flex flex-column">
+                    <h5 class="fs-6 font-bold mb-1">
+                      Status Persyaratan Dokumen
+                    </h5>
+                    <h2 class="text-xs text-neutral-70 mb-0">
+                      Approved - 26/09/2024 • 15:00
+                    </h2>
+                  </div>
+                  <span class="dt-status dt-lg status-failed">Rejected</span>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body p-0">
+                <div
+                  class="d-flex align-items-center justify-content-between p-4"
+                >
+                  <p class="text-sm fw-medium text-neutral-100 mb-0">
+                    Jenis Bisnis
+                  </p>
+                  <p class="text-sm text-neutral-100 fw-bold">Aggregator</p>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion mb-4" id="detailOwner">
+              <div
+                class="card-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseDetailOwner"
+                aria-expanded="true"
+                aria-controls="collapseDetailOwner"
+              >
+                <h5 class="card-title">Informasi Pemilik</h5>
+              </div>
+              <div
+                id="collapseDetailOwner"
+                class="accordion-collapse collapse show border-top border-line-small"
+                data-bs-parent="#detailOwner"
+              >
+                <div class="accordion-body p-4">
+                  <div class="row g-4">
+                    <div class="col-12 col-md-6 mt-4">
+                      <div class="form-group mb-4">
+                        <label for="name" class="form-label"
+                          >Nama Pemilik</label
+                        >
+                        <input
+                          id="name"
+                          type="text"
+                          name="name"
+                          class="form-control"
+                          placeholder="Masukkan nama pemilik"
+                          value="Samantha Putri"
+                          autocomplete="off"
+                          required
+                        />
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="placeOfBirth" class="form-label">
+                          Tempat Lahir
+                        </label>
+                        <input
+                          id="placeOfBirth"
+                          type="text"
+                          name="placeOfBirth"
+                          class="form-control"
+                          placeholder="Masukkan nama kota"
+                          value="Surabaya"
+                          required
+                        />
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="dateOfBirth" class="form-label">
+                          Tanggal Lahir
+                        </label>
+                        <input
+                          id="dateOfBirth"
+                          type="text"
+                          name="dateOfBirth"
+                          class="form-control"
+                          placeholder="Pilih tanggal"
+                          data-toggle="datepicker"
+                          value="01/01/1990"
+                          required
+                        />
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="ownerPhoneNumber" class="form-label">
+                          Nomor Handphone Perusahaan
+                        </label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="phone-addon"
+                            >+62</span
+                          >
+                          <input
+                            id="ownerPhoneNumber"
+                            type="tel"
+                            name="ownerPhoneNumber"
+                            class="form-control"
+                            placeholder="Masukkan nomor handphone"
+                            aria-describedby="phone-addon"
+                            value="81234567890"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="ownerEmail" class="form-label">
+                          Email
+                        </label>
+                        <input
+                          id="ownerEmail"
+                          type="email"
+                          name="ownerEmail"
+                          class="form-control"
+                          placeholder="Masukkan email"
+                          value="jatelindoperkasaabadi@gmail.com"
+                          required
+                        />
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="noKtp" class="form-label"
+                          >Nomor KTP (NIK)</label
+                        >
+                        <input
+                          id="noKtp"
+                          type="text"
+                          name="noKtp"
+                          class="form-control number-only"
+                          placeholder="Masukkan nomor NIK"
+                          minlength="10"
+                          inputmode="numeric"
+                          value="3175070101909990"
+                          required
+                        />
+                        <div class="form-feedback"></div>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="fotoKtp" class="form-label">Foto KTP</label>
+                        <label for="fotoKtp" class="input-file-box">
+                          <img
+                            src="img/thumbnail-placeholder.svg"
+                            class="input-image-preview"
+                            alt="foto ktp"
+                          />
+                          <div class="input-file-icon d-none">
+                            <span class="placeholder-image"></span>
+                          </div>
+                          <div class="input-file-detail">
+                            <h3 class="file-detail-title">Foto KTP asli</h3>
+                            <p class="file-detail-subtitle">
+                              Maksimal 15Mb, format JPG, PNG
+                            </p>
+                          </div>
+                          <input
+                            type="file"
+                            id="fotoKtp"
+                            name="fotoKtp"
+                            class="d-none"
+                            accept="image/png,image/jpeg"
+                            required
+                          />
+                        </label>
+                        <div class="form-feedback"></div>
+                      </div>
+                      <div class="form-group">
+                        <label for="fotoSelfieKtp" class="form-label"
+                          >Foto Selfie dengan KTP</label
+                        >
+                        <label for="fotoSelfieKtp" class="input-file-box">
+                          <img
+                            src="img/thumbnail-placeholder.svg"
+                            class="input-image-preview"
+                            alt="foto selfie ktp"
+                          />
+                          <div class="input-file-icon d-none">
+                            <span class="placeholder-image"></span>
+                          </div>
+                          <div class="input-file-detail">
+                            <h3 class="file-detail-title">
+                              Foto Selfie dengan KTP asli
+                            </h3>
+                            <p class="file-detail-subtitle">
+                              Maksimal 15Mb, format JPG, PNG
+                            </p>
+                          </div>
+                          <input
+                            type="file"
+                            id="fotoSelfieKtp"
+                            name="fotoSelfieKtp"
+                            class="d-none"
+                            accept="image/png,image/jpeg"
+                            required
+                          />
+                        </label>
+                        <div class="form-feedback"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-4">
+                      <div class="form-group mb-4">
+                        <label for="ownerProvinsi" class="form-label"
+                          >Provinsi</label
+                        >
+                        <select
+                          id="ownerProvinsi"
+                          class="form-control select2"
+                          name="ownerProvinsi"
+                          data-value="provinsi"
+                          data-placeholder="Masukkan provinsi"
+                          required
+                        ></select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="ownerKabupaten" class="form-label"
+                          >Kota/Kabupaten</label
+                        >
+                        <select
+                          id="ownerKabupaten"
+                          class="form-control select2"
+                          name="ownerKabupaten"
+                          data-value="kabupaten"
+                          data-placeholder="Masukkan kota/kabupaten"
+                          required
+                        ></select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="ownerKecamatan" class="form-label"
+                          >Kecamatan</label
+                        >
+                        <select
+                          id="ownerKecamatan"
+                          class="form-control select2"
+                          name="ownerKecamatan"
+                          data-value="kecamatan"
+                          data-placeholder="Masukkan kecamatan"
+                          required
+                        ></select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="ownerKelurahan" class="form-label"
+                          >Kelurahan</label
+                        >
+                        <select
+                          id="ownerKelurahan"
+                          class="form-control select2"
+                          name="ownerKelurahan"
+                          data-value="kelurahan"
+                          data-placeholder="Masukkan kelurahan"
+                          required
+                        ></select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="address" class="form-label">Alamat</label>
+                        <input
+                          id="address"
+                          type="text"
+                          name="address"
+                          class="form-control"
+                          placeholder="Masukkan nama jalan, nomor, lantai, blok, RT/RW"
+                          value="Jalan Sunan Kalijaga Blok K/5, No 63B, RT003 RW001"
+                          autocomplete="off"
+                          required
+                        />
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="noNpwp" class="form-label"
+                          >Nomor NPWP</label
+                        >
+                        <input
+                          id="noNpwp"
+                          type="text"
+                          name="noNpwp"
+                          class="form-control number-only"
+                          placeholder="Masukkan nomor NPWP"
+                          minlength="9"
+                          inputmode="numeric"
+                          value="3175070101909990"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="fotoNpwp" class="form-label"
+                          >Nomor NPWP</label
+                        >
+                        <label for="fotoNpwp" class="input-file-box">
+                          <img
+                            src="img/thumbnail-placeholder.svg"
+                            class="input-image-preview"
+                            alt="foto npwp"
+                          />
+                          <div class="input-file-icon d-none">
+                            <span class="placeholder-image"></span>
+                          </div>
+                          <div class="input-file-detail">
+                            <h3 class="file-detail-title">Foto NPWP</h3>
+                            <p class="file-detail-subtitle">
+                              Maksimal 15Mb, format JPG, PNG
+                            </p>
+                          </div>
+                          <input
+                            type="file"
+                            id="fotoNpwp"
+                            name="fotoNpwp"
+                            class="d-none"
+                            accept="image/png,image/jpeg"
+                            required
+                          />
+                        </label>
+                        <div class="form-feedback"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion mb-4" id="detailCompany">
+              <div
+                class="card-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseDetailCompany"
+                aria-expanded="true"
+                aria-controls="collapseDetailCompany"
+              >
+                <h5 class="card-title">Informasi Perusahaan</h5>
+              </div>
+              <div
+                id="collapseDetailCompany"
+                class="accordion-collapse collapse show border-top border-line-small"
+                data-bs-parent="#detailCompany"
+              >
+                <div class="accordion-body p-4">
+                  <div class="row g-4">
+                    <div class="col-12 col-md-6 mt-4">
+                      <div class="form-group mb-4">
+                        <label for="legalEntity" class="form-label"
+                          >Badan Hukum</label
+                        >
+                        <select
+                          id="legalEntity"
+                          class="form-control select2"
+                          name="legalEntity"
+                          data-placeholder="Pilih badan hukum"
+                          data-minimum-results-for-search="-1"
+                          required
+                        >
+                          <option value=""></option>
+                          <option value="1">BLU (Badan Layanan Umum)</option>
+                          <option value="2">
+                            BUMN (Badan Usaha Milik Negara)
+                          </option>
+                          <option value="3">CV (Persekutuan Komanditer)</option>
+                          <option value="4">Firma</option>
+                          <option value="5">Koperasi</option>
+                          <option value="6" selected>
+                            PT (Perseroan Terbatas)
+                          </option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="companyName" class="form-label">
+                          Nama Perusahaan
+                        </label>
+                        <input
+                          id="companyName"
+                          type="text"
+                          name="companyName"
+                          class="form-control"
+                          placeholder="Masukkan nama perusahaan"
+                          value="Jatelindo Perkasa Abadi"
+                          required
+                        />
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="companyPhoneNumber" class="form-label">
+                          Nomor Handphone Perusahaan
+                        </label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="phone-addon"
+                            >+62</span
+                          >
+                          <input
+                            id="companyPhoneNumber"
+                            type="tel"
+                            name="companyPhoneNumber"
+                            class="form-control"
+                            placeholder="Masukkan nomor handphone"
+                            aria-describedby="phone-addon"
+                            value="81234567890"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="companyEmail" class="form-label">
+                          Email
+                        </label>
+                        <input
+                          id="companyEmail"
+                          type="email"
+                          name="companyEmail"
+                          class="form-control"
+                          placeholder="Masukkan email"
+                          value="jatelindoperkasaabadi@gmail.com"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 mt-0 mt-md-4">
+                      <div class="form-group mb-4">
+                        <label for="provinsi" class="form-label"
+                          >Provinsi</label
+                        >
+                        <select
+                          id="provinsi"
+                          class="form-control select2"
+                          name="provinsi"
+                          data-value="provinsi"
+                          data-placeholder="Masukkan provinsi"
+                          required
+                        ></select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="kabupaten" class="form-label"
+                          >Kota/Kabupaten</label
+                        >
+                        <select
+                          id="kabupaten"
+                          class="form-control select2"
+                          name="kabupaten"
+                          data-value="kabupaten"
+                          data-placeholder="Masukkan kota/kabupaten"
+                          required
+                        ></select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="kecamatan" class="form-label"
+                          >Kecamatan</label
+                        >
+                        <select
+                          id="kecamatan"
+                          class="form-control select2"
+                          name="kecamatan"
+                          data-value="kecamatan"
+                          data-placeholder="Masukkan kecamatan"
+                          required
+                        ></select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="kelurahan" class="form-label"
+                          >Kelurahan</label
+                        >
+                        <select
+                          id="kelurahan"
+                          class="form-control select2"
+                          name="kelurahan"
+                          data-value="kelurahan"
+                          data-placeholder="Masukkan kelurahan"
+                          required
+                        ></select>
+                      </div>
+                      <div class="form-group">
+                        <label for="addressCompany" class="form-label"
+                          >Alamat</label
+                        >
+                        <input
+                          id="addressCompany"
+                          type="text"
+                          name="address"
+                          class="form-control"
+                          placeholder="Masukkan nama jalan, nomor, lantai, blok, RT/RW"
+                          value="Jalan Sunan Kalijaga Blok K/5, No 63B, RT003 RW001"
+                          autocomplete="off"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion mb-4" id="detailBusiness">
+              <div
+                class="card-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseDetailBusiness"
+                aria-expanded="true"
+                aria-controls="collapseDetailBusiness"
+              >
+                <h5 class="card-title">Informasi Usaha</h5>
+              </div>
+              <div
+                id="collapseDetailBusiness"
+                class="accordion-collapse collapse show border-top border-line-small"
+                data-bs-parent="#detailBusiness"
+              >
+                <div class="accordion-body p-4">
+                  <div class="row g-4">
+                    <div class="col-12 col-md-6">
+                      <div class="form-group mb-4">
+                        <label for="businessName" class="form-label"
+                          >Nama Usaha</label
+                        >
+                        <input
+                          id="businessName"
+                          type="text"
+                          name="businessName"
+                          class="form-control"
+                          placeholder="Masukkan nama usaha"
+                          value="Fellopay"
+                          required
+                        />
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="businessCategory" class="form-label">
+                          Kategori Usaha
+                        </label>
+                        <select
+                          id="businessCategory"
+                          class="form-control select2 select2-template-result"
+                          name="businessCategory"
+                          data-placeholder="Pilih kategori usaha"
+                          data-minimum-results-for-search="-1"
+                          required
+                        >
+                          <option value=""></option>
+                          <option value="1">
+                            Usaha Mikro | Asset s/d 50 juta, Omset s/d 300 juta
+                          </option>
+                          <option value="2" selected>
+                            Usaha Kecil | Asset > 50 juta s/d 500 juta, Omset >
+                            300 juta s/d 2,5 Miliar
+                          </option>
+                          <option value="3">
+                            Usaha Mikro | Asset > 50 juta s/d 500 juta, Omset >
+                            300 juta s/d 2,5 Miliar
+                          </option>
+                          <option value="4">
+                            Usaha Kecil | Asset > 50 juta s/d 500 juta, Omset >
+                            300 juta s/d 2,5 Miliar
+                          </option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="businessDescription" class="form-label">
+                          Keterangan Usaha
+                        </label>
+                        <textarea
+                          name="businessDescription"
+                          id="businessDescription"
+                          class="form-control"
+                          rows="5"
+                          placeholder="Masukkan keterangan tentang usaha"
+                          required
+                        >
+Fellopay sistem pembayaran yang dimiliki Jatelindo Perkasa Abadi, Fellopay menawarkan kemudahan bertransaksi dalam melakukan pembayaran secara online di merchant dengan berbagai pilihan metode pembayaran yang terintegrasi bagi merchant agar operasional bisnis berjalan dengan lancar dan dapat dapat menjangkau lebih banyak pelanggan dalam melakukan pembayaran.</textarea
+                        >
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="businessEmail" class="form-label"
+                          >Email Usaha</label
+                        >
+                        <input
+                          id="businessEmail"
+                          type="email"
+                          name="businessEmail"
+                          class="form-control"
+                          placeholder="Masukkan email"
+                          value="jatelindoperkasaabadi@gmail.com"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="businessPhoneNumber" class="form-label">
+                          Nomor Handphone Usaha
+                        </label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="phone-addon"
+                            >+62</span
+                          >
+                          <input
+                            id="businessPhoneNumber"
+                            type="tel"
+                            name="businessPhoneNumber"
+                            class="form-control"
+                            placeholder="Masukkan nomor handphone"
+                            aria-describedby="phone-addon"
+                            value="81234567890"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group mb-4">
+                        <label for="linkSocial" class="form-label"
+                          >Link Website</label
+                        >
+                        <input
+                          id="linkSocial"
+                          type="text"
+                          name="linkSocial"
+                          class="form-control"
+                          placeholder="Masukkan nama usaha"
+                          value="www.jatelindo.co.id"
+                          required
+                        />
+                      </div>
+                      <div class="form-group mb-4">
+                        <label for="logoBrand" class="form-label"
+                          >Logo Brand</label
+                        >
+                        <label for="logoBrand" class="input-file-box">
+                          <img
+                            src="img/thumbnail-placeholder.svg"
+                            class="input-image-preview"
+                            alt="logo brand"
+                          />
+                          <div class="input-file-icon d-none">
+                            <span class="placeholder-image"></span>
+                          </div>
+                          <div class="input-file-detail">
+                            <h3 class="file-detail-title">Logo Brand</h3>
+                            <p class="file-detail-subtitle">
+                              Maksimal 15Mb, format JPG, PNG
+                            </p>
+                          </div>
+                          <input
+                            type="file"
+                            id="logoBrand"
+                            name="logoBrand"
+                            class="d-none"
+                            accept="image/png,image/jpeg"
+                            required
+                          />
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label for="photoProduct" class="form-label"
+                          >Foto Lokasi Bisnis / Aktivitas / Produk</label
+                        >
+                        <label for="photoProduct" class="input-file-box">
+                          <img
+                            src="img/thumbnail-placeholder.svg"
+                            class="input-image-preview"
+                            alt="foto lokasi"
+                          />
+                          <div class="input-file-icon d-none">
+                            <span class="placeholder-image"></span>
+                          </div>
+                          <div class="input-file-detail">
+                            <h3 class="file-detail-title">
+                              Foto Lokasi Bisnis / Aktivitas / Foto Produk
+                            </h3>
+                            <p class="file-detail-subtitle">
+                              Maksimal 15Mb, format JPG, PNG
+                            </p>
+                          </div>
+                          <input
+                            type="file"
+                            id="photoProduct"
+                            name="photoProduct"
+                            class="d-none"
+                            accept="image/png,image/jpeg"
+                            required
+                          />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion mb-4" id="detailService">
+              <div
+                class="card-header"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseDetailService"
+                aria-expanded="true"
+                aria-controls="collapseDetailService"
+              >
+                <h5 class="card-title">Layanan</h5>
+              </div>
+              <div
+                id="collapseDetailService"
+                class="accordion-collapse collapse show border-top border-line-small"
+                data-bs-parent="#detailService"
+              >
+                <div class="accordion-body p-4">
+                  <div class="container px-0">
+                    <div class="row row-gap-4">
+                      <div class="col-12 col-md-6 form-group form-preview">
+                        <div class="input-append append-right">
+                          <input
+                            type="text"
+                            name="service[]"
+                            class="form-control"
+                            value="FELLO H2H"
+                          />
+                          <div class="append-icon icon-checked"></div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 form-group form-preview">
+                        <div class="input-append append-right">
+                          <input
+                            type="text"
+                            name="service[]"
+                            class="form-control"
+                            value="Fellopay PG"
+                          />
+                          <div class="append-icon icon-checked"></div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 form-group form-preview">
+                        <div class="input-append append-right">
+                          <input
+                            type="text"
+                            name="service[]"
+                            class="form-control"
+                            value="QRIS Dinamis MPM"
+                          />
+                          <div class="append-icon icon-checked"></div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 form-group form-preview">
+                        <div class="input-append append-right">
+                          <input
+                            type="text"
+                            name="service[]"
+                            class="form-control"
+                            value="QRIS Statis MPM"
+                          />
+                          <div class="append-icon icon-checked"></div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 form-group form-preview">
+                        <div class="input-append append-right">
+                          <input
+                            type="text"
+                            name="service[]"
+                            class="form-control"
+                            value="Transfer Dana"
+                          />
+                          <div class="append-icon icon-checked"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-accordion">
+              <div class="card-body">
+                <div
+                  class="d-flex flex-column flex-md-row row-gap-4 align-items-center justify-content-between"
+                >
+                  <p class="text-sm text-neutral-100">
+                    Periksa kembali kelengkapan data
+                  </p>
+                  <div
+                    class="d-flex align-items-center justify-content-center justify-content-md-end gap-4 col-12 col-md-4"
+                  >
+                    <button type="submit" class="btn btn-primary">
+                      Kirim Ulang Data
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <script type="text/javascript">
+          $(function () {
+            app.SelectProvinsi.init();
+
+            function formatState(state) {
+              if (!state.id) {
+                return state.text;
+              }
+
+              var $state = $(`
+                  <div class="d-flex flex-column gap-1">
+                      <span class="text-md fw-bold">${
+                        state.text.split("|")[0]
+                      }</span>
+                      <span class="text-xs">${state.text.split("|")[1]}</span>
+                  </div>
+              `);
+
+              return $state;
+            }
+
+            $(".select2-template-result").select2({
+              templateResult: formatState,
+            });
+          });
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

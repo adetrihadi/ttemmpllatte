@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>List Merchant — Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <!-- <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" /> -->
+    </a>
+    <button
+      class="btn btn-link p-0"
+      data-toggle="sidebar"
+      data-target="#sidebar-dashboard"
+    >
+      <img src="img/ic-menu-bar.svg" alt="icon menu" />
+    </button>
+  </div>
+</nav>
+ <aside id="sidebar-dashboard" class="sidebar">
+  <div class="sidebar-group">
+    <div class="sidebar-header">
+      <div class="header-logo">
+        <!-- <img src="img/logo-fello-merchant-black.svg" alt="logo" /> -->
+      </div>
+      <div class="header-account">
+        <div class="account-initial" data-name="ADM"></div>
+        <!-- <img src="img/logo-brand.svg" class="account-logo" alt="logo brand" /> -->
+        <div class="account-content">
+          <h5 class="account-name">Administrator</h5>
+          <h5 class="account-id">Brand ID - 1819220041864</h5>
+        </div>
+      </div>
+      <div class="menu-notification">
+        <a href="notification.html" class="">
+          <div class="menu-notification-group">
+            <span class="icon-menu ic-notification"></span>
+            <span>Notifikasi</span>
+          </div>
+          <div class="menu-notification-badge">1</div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar-body">
+      <ul id="sidebarMenu" class="sidebar-menu-group">
+        <li class="menu-item">
+          <a href="dashboard.html">
+            <span class="icon-menu ic-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="home.html">
+            <span class="icon-menu ic-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="menu-item menu-tree">
+          <a
+            href="#"
+            aria-expanded="false"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuRcn"
+          >
+            <div class="d-flex align-items-center">
+              <span class="icon-menu ic-report"></span>
+              <span>Rekon PLN ID</span>
+            </div>
+            <span class="icon-menu ic-dropdown"></span>
+          </a>
+          <ul
+            id="menuRcn"
+            class="menu-item-collapse collapse"
+            data-bs-parent="#sidebarMenu"
+          >
+            <li>
+              <a href="ftr-pln-id.html">
+                <span class="icon-menu ic-circle"></span>
+                <span>FTR PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>RCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>FCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>SETTLEMENT</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>KIRIM EMAIL</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar-footer">
+    <div class="sidebar-footer-group">
+      <h5 class="account-user">Satria Bergetar</h5>
+      <span class="account-role">Individu</span>
+    </div>
+    <div class="btn-group dropup">
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img src="img/ic-dot-vertical.svg" alt="icon dot" />
+      </button>
+      <ul class="dropdown-menu dropdown-account-footer">
+        <li>
+          <a class="dropdown-item" href="user-profile.html">
+            <img src="img/ic-profile.svg" alt="profile" />
+            Profil Saya
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img src="img/ic-logout-sm.svg" alt="logout" />
+            Keluar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main class="main bg-soft-white">
+      <div class="content">
+        <div class="content-header">
+          <h1 class="header-title">List Merchant</h1>
+          <p class="text-sm text-neutral-70 mt-1">
+            Kelola data informasi merchant
+          </p>
+          <!-- <nav aria-label="breadcrumb">
+            <ol class="breadcrumb with-arrow">
+              <li class="breadcrumb-item">
+                <a href="data-merchant.html">Data Merchant</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="data-information.html">Informasi Merchant</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                List Merchant
+              </li>
+            </ol>
+          </nav> -->
+        </div>
+        <div class="content-body">
+          <div class="card card-accordion mb-4" id="informationSftp">
+            <div
+              class="card-header collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseInformationSftp"
+              aria-expanded="false"
+              aria-controls="collapseInformationSftp"
+            >
+              <div class="card-title">
+                <div class="d-flex flex-column">
+                  <h5 class="fs-6 font-bold mb-0">SFTP Dokumen Merchant</h5>
+                  <h2 class="text-xs mb-0">
+                    Upload file dokumen merchant melalui SFTP
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div
+              id="collapseInformationSftp"
+              class="accordion-collapse collapse"
+              data-bs-parent="#informationSftp"
+            >
+              <div class="accordion-body p-4 pt-0">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">Host</p>
+                      <p class="fw-medium text-neutral-100 text-end">
+                        sftp1.jatelindo.co.id
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">Directory</p>
+                      <p class="fw-medium text-neutral-100 text-end">
+                        202.152.22.117
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">Username</p>
+                      <p class="fw-medium text-neutral-100 text-end">
+                        fellopay
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">Password</p>
+                      <div
+                        class="d-flex flex-row align-items-center gap-2 position-relative"
+                      >
+                        <p
+                          id="passwordSftp"
+                          class="fw-medium text-neutral-100 text-end"
+                        >
+                          testing123
+                        </p>
+                        <div
+                          class="icon-password user-select-none"
+                          data-toggle="hide-password"
+                          data-target="passwordSftp"
+                        ></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="fw-medium text-neutral-100">Port</p>
+                      <p class="fw-medium text-neutral-100 text-end">22</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header with-border">
+              <div class="d-flex align-items-center flex-wrap row-gap-4 mb-4">
+                <div class="d-flex flex-column flex-fill">
+                  <p class="text-neutral-100 fw-bold mb-1">Fellopay</p>
+                  <p class="text-xs text-neutral-70">Merchant ID - 11125308</p>
+                </div>
+                <a href="upload-bulk.html" class="btn btn-outline-primary"
+                  >Upload Bulk</a
+                >
+              </div>
+              <div class="d-flex flex-row gap-4">
+                <div class="form-group">
+                  <select
+                    name=""
+                    id=""
+                    class="form-select"
+                    data-length="tableListMerchant"
+                  >
+                    <option value="10">10</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                </div>
+                <div class="form-group flex-fill">
+                  <input
+                    type="text"
+                    class="form-control"
+                    data-search="tableListMerchant"
+                    placeholder="Cari disini"
+                  />
+                </div>
+                <div class="form-group">
+                  <div class="input-append append-right">
+                    <input
+                      type="text"
+                      name="date"
+                      class="form-control"
+                      placeholder="Masukkan tanggal"
+                      data-toggle="daterange"
+                      data-search-date="tableListMerchant"
+                      data-search-index="2,12"
+                    />
+                    <div class="append-icon icon-calendar"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <select
+                    name=""
+                    id=""
+                    class="form-select"
+                    data-search-status="tableListMerchant"
+                    data-search-index="9"
+                  >
+                    <option value="">Semua</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Rejected">Rejected</option>
+                    <option value="Unregistered">Unregistered</option>
+                    <option value="Success">Success</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <table
+                id="tableListMerchant"
+                class="table table-hover no-border-top nowrap mb-0"
+                width="100%"
+              >
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Jenis Bisnis</th>
+                    <th>Nama Merchant</th>
+                    <th>Merchant ID</th>
+                    <th>MPAN</th>
+                    <th>Brand ID</th>
+                    <th>Nama</th>
+                    <th>No. Handphone</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>Badan Usaha</td>
+                    <td>Fellopay</td>
+                    <td>11125308</td>
+                    <td>9360082769111275376</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>
+                      <span class="dt-status status-progress">In Progress</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>Badan Usaha</td>
+                    <td>Dimspay</td>
+                    <td>11125308</td>
+                    <td>9360082769111275376</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>
+                      <span class="dt-status status-progress">In Progress</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>Individu</td>
+                    <td>Merchant OP</td>
+                    <td>11125308</td>
+                    <td>9360082769111275376</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>
+                      <span class="dt-status status-success">Success</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>Badan Usaha</td>
+                    <td>Merchant EVM</td>
+                    <td>11125308</td>
+                    <td>9360082769111275376</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>
+                      <span class="dt-status status-progress">In Progress</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>Badan Usaha</td>
+                    <td>Merchant EVM</td>
+                    <td>11125308</td>
+                    <td>9360082769111275376</td>
+                    <td>1819220041864</td>
+                    <td>Samantha Putri</td>
+                    <td>08123457890</td>
+                    <td>samanthaputri@gmail.com</td>
+                    <td>
+                      <span class="dt-status status-unregister">Block</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <a
+                          href="data-information.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript">
+      $(function () {
+        let tableListMerchant = $("#tableListMerchant").DataTable({
+          dom: '<"dataTables_top">rt<"dataTables_bottom"ip><"clear">',
+          fixedColumns: {
+            start: 0,
+            end: 2,
+          },
+        });
+        tableListMerchant
+          .on("order.dt search.dt", function () {
+            let i = 1;
+
+            tableListMerchant
+              .cells(null, 0, {
+                search: "applied",
+                order: "applied",
+              })
+              .every(function (cell) {
+                this.data(i++);
+              });
+          })
+          .draw();
+        tableListMerchant.on("user-select", function (e, _, _, cell, _) {
+          let actionColumn = cell[0][0].column;
+          let columnLength =
+            tableListMerchant.row(cell.node()).data().length - 1;
+          let data = tableListMerchant.row(cell.node()).data();
+
+          if (actionColumn == columnLength) {
+            e.preventDefault();
+          }
+        });
+
+        app.CustomFilterDT.init();
+      });
+    </script>
+  </body>
+</html>

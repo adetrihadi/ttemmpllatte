@@ -177,13 +177,14 @@
                 <div class="list-group p-4">
                   <div class="row">
                     <div class="col-md-6">
-                      <div class="form-group mb-4">
+                      <div id="productContainer" class="form-group mb-4">
                         <select
                           id="productName"
                           class="form-control select2"
                           name="productName"
                           data-placeholder="Pilih Nama Product"
                           data-minimum-results-for-search="-1"
+                          data-dropdown-parent="#productContainer"
                           required
                         >
                           <option value=""></option>
@@ -192,13 +193,14 @@
                           <option value="504">(504) - PLN NON TAGLIS</option>
                         </select>
                       </div>
-                      <div class="form-group">
+                      <div id="bankContainer" class="form-group">
                         <select
                           id="bankName"
                           class="form-control select2"
                           name="bankName"
                           data-placeholder="Pilih Nama Bank"
                           data-minimum-results-for-search="-1"
+                          data-dropdown-parent="#bankContainer"
                           required
                         >
                           <option value=""></option>
@@ -341,6 +343,13 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $('#tableFtr').DataTable();
+
+        // $('#productName').select2({
+        //   dropdownParent: $('#productContainer')
+        // });
+        // $('#bankName').select2({
+        //   dropdownParent: $('#bankContainer')
+        // });
       });
     </script>
   </body>

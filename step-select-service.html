@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" />
+    </a>
+    <div
+      class="d-flex d-md-none icon-link-logout"
+      data-bs-toggle="modal"
+      data-bs-target="#modalLogout"
+    >
+      <img src="img/ic-logout-sm.svg" alt="icon logout" />
+      <span>Keluar</span>
+    </div>
+  </div>
+</nav>
+
+    <main class="main">
+      <div class="onboarding-step-cover">
+        <div class="d-flex flex-column align-items-start gap-5">
+          <img
+            src="img/logo-fello-merchant-black.svg"
+            class="img-logo"
+            alt="logo fello merchant"
+          />
+          <div class="step-area step-lg">
+  <div class="step-header">
+    <img
+      src="img/business-type-individual.svg"
+      class="step-header-img"
+      alt="individal type"
+    />
+    <span class="step-header-title">Individu</span>
+  </div>
+  <div class="steps-register">
+    <div class="step">
+      <div class="step-title">Informasi Pemilik</div>
+      <div class="step-description">Lengkapi data informasi pemilik</div>
+    </div>
+    <div class="step">
+      <div class="step-title">Informasi Perusahaan</div>
+      <div class="step-description">Lengkapi data informasi perusahaan</div>
+    </div>
+    <div class="step">
+      <div class="step-title">Informasi Usaha</div>
+      <div class="step-description">Lengkapi data informasi usaha</div>
+    </div>
+    <div class="step">
+      <div class="step-title">Pilih Layanan</div>
+      <div class="step-description">Sesuaikan layanan dengan kebutuhan</div>
+    </div>
+    <div class="step">
+      <div class="step-title">Rekening Bank</div>
+      <div class="step-description">Lengkapi data rekening bank</div>
+    </div>
+    <div class="step">
+      <div class="step-title">Upload Dokumen</div>
+      <div class="step-description">Upload kelengkapan dokumen</div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="onboarding-step-form">
+        <form
+          id="step-select-service-form"
+          action=""
+          method="POST"
+          class="form form-validation"
+          autocomplete="off"
+        >
+          <div class="form-header">
+            <h1 class="form-header-title">Pilih Layanan</h1>
+            <p class="form-header-description">
+              Sesuaikan layanan sesuai dengan kebutuhan
+            </p>
+            <div class="step-area">
+  <div class="step-bar">
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step-progress">1/5</div>
+  </div>
+</div>
+
+          </div>
+          <div class="form-content">
+            <label for="service-type-fello-h2h" class="card-select">
+              <input
+                id="service-type-fello-h2h"
+                type="checkbox"
+                name="serviceType[]"
+                value="1"
+                checked
+              />
+              <div class="card-select-item sm">
+                <div class="select-item-content item-sm">
+                  <div class="d-flex flex-column gap-1">
+                    <h4 class="title">FELLO H2H</h4>
+                  </div>
+                </div>
+                <div class="select-check-icon"></div>
+              </div>
+            </label>
+            <label for="service-type-fello-pg" class="card-select">
+              <input
+                id="service-type-fello-pg"
+                type="checkbox"
+                name="serviceType[]"
+                value="2"
+              />
+              <div class="card-select-item">
+                <div class="select-item-content item-sm">
+                  <div class="d-flex flex-column gap-1">
+                    <h4 class="title">Fellopay PG</h4>
+                    <p class="description text-sm">
+                      Terima pembayaran melalui Fello & Doku
+                    </p>
+                  </div>
+                </div>
+                <div class="select-check-icon"></div>
+              </div>
+            </label>
+            <label for="service-type-qris-dynamic" class="card-select">
+              <input
+                id="service-type-qris-dynamic"
+                type="checkbox"
+                name="serviceType[]"
+                value="3"
+              />
+              <div class="card-select-item">
+                <div class="select-item-content item-sm">
+                  <div class="d-flex flex-column gap-1">
+                    <h4 class="title">
+                      QRIS Dinamis (Merchant Presented Mode / MPM)
+                    </h4>
+                    <p class="description text-sm">
+                      Terima pembayaran dengan QRCode
+                    </p>
+                  </div>
+                </div>
+                <div class="select-check-icon"></div>
+              </div>
+            </label>
+            <label for="service-type-qris-static" class="card-select">
+              <input
+                id="service-type-qris-static"
+                type="checkbox"
+                name="serviceType[]"
+                value="4"
+              />
+              <div class="card-select-item">
+                <div class="select-item-content item-sm">
+                  <div class="d-flex flex-column gap-1">
+                    <h4 class="title">
+                      QRIS Statis (Merchant Presented Mode / MPM)
+                    </h4>
+                    <p class="description text-sm">
+                      Terima pembayaran dengan QRCode
+                    </p>
+                  </div>
+                </div>
+                <div class="select-check-icon"></div>
+              </div>
+            </label>
+            <label for="service-type-transfer-dana" class="card-select">
+              <input
+                id="service-type-transfer-dana"
+                type="checkbox"
+                name="serviceType[]"
+                value="5"
+              />
+              <div class="card-select-item">
+                <div class="select-item-content item-sm">
+                  <div class="d-flex flex-column gap-1">
+                    <h4 class="title">Transfer Dana</h4>
+                    <p class="description text-sm">Transfer ke rekening bank</p>
+                  </div>
+                </div>
+                <div class="select-check-icon"></div>
+              </div>
+            </label>
+            <hr class="border-neutral-30" />
+            <div class="form-group">
+              <label for="publicKey" class="form-label">Public Key</label>
+              <textarea
+                name="publicKey"
+                id="publicKey"
+                class="form-control"
+                rows="4"
+                placeholder="Masukkan public key"
+                required
+              ></textarea>
+              <div class="form-feedback"></div>
+              <div class="form-note">
+                Public Key untuk membuat Credential SFTP penyimpanan dokumen
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-md-flex form-footer flex-row">
+            <a
+              href="merchant-onboarding.html"
+              class="btn btn-outline-base w-25"
+            >
+              Kembali
+            </a>
+            <button type="submit" class="btn btn-primary w-75" disabled>
+              Lanjutkan
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <div class="action-bottom">
+      <a href="merchant-onboarding.html" class="btn btn-outline-base w-25">
+        Kembali
+      </a>
+      <button
+        type="submit"
+        form="step-select-service-form"
+        class="btn btn-primary w-100 w-md-35"
+        disabled
+      >
+        Lanjutkan
+      </button>
+    </div>
+    <script type="text/javascript">
+      $(function () {
+        app.FormValidation.init("#step-select-service-form");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>User Management — Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <!-- <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" /> -->
+    </a>
+    <button
+      class="btn btn-link p-0"
+      data-toggle="sidebar"
+      data-target="#sidebar-dashboard"
+    >
+      <img src="img/ic-menu-bar.svg" alt="icon menu" />
+    </button>
+  </div>
+</nav>
+ <aside id="sidebar-dashboard" class="sidebar">
+  <div class="sidebar-group">
+    <div class="sidebar-header">
+      <div class="header-logo">
+        <!-- <img src="img/logo-fello-merchant-black.svg" alt="logo" /> -->
+      </div>
+      <div class="header-account">
+        <div class="account-initial" data-name="ADM"></div>
+        <!-- <img src="img/logo-brand.svg" class="account-logo" alt="logo brand" /> -->
+        <div class="account-content">
+          <h5 class="account-name">Administrator</h5>
+          <h5 class="account-id">Brand ID - 1819220041864</h5>
+        </div>
+      </div>
+      <div class="menu-notification">
+        <a href="notification.html" class="">
+          <div class="menu-notification-group">
+            <span class="icon-menu ic-notification"></span>
+            <span>Notifikasi</span>
+          </div>
+          <div class="menu-notification-badge">1</div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar-body">
+      <ul id="sidebarMenu" class="sidebar-menu-group">
+        <li class="menu-item">
+          <a href="dashboard.html">
+            <span class="icon-menu ic-dashboard"></span>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="home.html">
+            <span class="icon-menu ic-home"></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="menu-item menu-tree">
+          <a
+            href="#"
+            aria-expanded="false"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuRcn"
+          >
+            <div class="d-flex align-items-center">
+              <span class="icon-menu ic-report"></span>
+              <span>Rekon PLN ID</span>
+            </div>
+            <span class="icon-menu ic-dropdown"></span>
+          </a>
+          <ul
+            id="menuRcn"
+            class="menu-item-collapse collapse"
+            data-bs-parent="#sidebarMenu"
+          >
+            <li>
+              <a href="ftr-pln-id.html">
+                <span class="icon-menu ic-circle"></span>
+                <span>FTR PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>RCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>FCN PLN ID</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>SETTLEMENT</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon-menu ic-circle"></span>
+                <span>KIRIM EMAIL</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar-footer">
+    <div class="sidebar-footer-group">
+      <h5 class="account-user">Satria Bergetar</h5>
+      <span class="account-role">Individu</span>
+    </div>
+    <div class="btn-group dropup">
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img src="img/ic-dot-vertical.svg" alt="icon dot" />
+      </button>
+      <ul class="dropdown-menu dropdown-account-footer">
+        <li>
+          <a class="dropdown-item" href="user-profile.html">
+            <img src="img/ic-profile.svg" alt="profile" />
+            Profil Saya
+          </a>
+        </li>
+        <div class="divider"></div>
+        <li>
+          <a class="dropdown-item" href="#">
+            <img src="img/ic-logout-sm.svg" alt="logout" />
+            Keluar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main class="main bg-soft-white">
+      <div class="content">
+        <div class="content-header">
+          <h1 class="header-title">User Management</h1>
+          <p class="text-sm text-neutral-70 mt-1">
+            Buat dan kelola status akun
+          </p>
+        </div>
+        <div class="content-body">
+          <div class="card">
+            <div class="card-header with-border">
+              <div class="d-flex flex-row align-items-center gap-4">
+                <div class="form-group">
+                  <select
+                    name=""
+                    id=""
+                    class="form-select"
+                    data-length="tableUserManagement"
+                  >
+                    <option value="10">10</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                </div>
+                <div class="form-group col-lg-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Cari disini"
+                    data-search="tableUserManagement"
+                  />
+                </div>
+                <div class="form-group ms-auto">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalCreate"
+                  >
+                    Buat Akun Baru
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <table
+                id="tableUserManagement"
+                class="table table-hover no-border-top nowrap mb-0"
+                width="100%"
+              >
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>User ID</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Privilege</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>08123457890</td>
+                    <td>User Reviewer</td>
+                    <td>reviewer@gmail.com</td>
+                    <td>
+                      <span class="dt-status status-success">Active</span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage">Reviewer</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <button
+                          class="btn btn-dt-action btn-outline-warning btn-flex"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalEdit"
+                        >
+                          <span class="icon-edit"></span>
+                          Edit
+                        </button>
+                        <a
+                          href="detail-user.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>08123457890</td>
+                    <td>User Reviewer</td>
+                    <td>reviewer@gmail.com</td>
+                    <td>
+                      <span class="dt-status status-unregister">Block</span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage">Reviewer</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <button
+                          class="btn btn-dt-action btn-outline-warning btn-flex"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalEdit"
+                        >
+                          <span class="icon-edit"></span>
+                          Edit
+                        </button>
+                        <a
+                          href="detail-user.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>08123457890</td>
+                    <td>User Integration Officer</td>
+                    <td>integrationofficer@gmail.com</td>
+                    <td>
+                      <span class="dt-status status-success">Active</span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage">
+                        Integ. Officer
+                      </span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <button
+                          class="btn btn-dt-action btn-outline-warning btn-flex"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalEdit"
+                        >
+                          <span class="icon-edit"></span>
+                          Edit
+                        </button>
+                        <a
+                          href="detail-user.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>08123457890</td>
+                    <td>User Administrator Checker</td>
+                    <td>adminchecker@gmail.com</td>
+                    <td>
+                      <span class="dt-status status-success">Active</span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage">
+                        Adm. Checker
+                      </span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <button
+                          class="btn btn-dt-action btn-outline-warning btn-flex"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalEdit"
+                        >
+                          <span class="icon-edit"></span>
+                          Edit
+                        </button>
+                        <a
+                          href="detail-user.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>08123457890</td>
+                    <td>User Sales</td>
+                    <td>sales@gmail.com</td>
+                    <td>
+                      <span class="dt-status status-success">Active</span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage"> Sales </span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <button
+                          class="btn btn-dt-action btn-outline-warning btn-flex"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalEdit"
+                        >
+                          <span class="icon-edit"></span>
+                          Edit
+                        </button>
+                        <a
+                          href="detail-user.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>08123457890</td>
+                    <td>User GM Sales</td>
+                    <td>gmsales@gmail.com</td>
+                    <td>
+                      <span class="dt-status status-success">Active</span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage">GM Sales</span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <button
+                          class="btn btn-dt-action btn-outline-warning btn-flex"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalEdit"
+                        >
+                          <span class="icon-edit"></span>
+                          Edit
+                        </button>
+                        <a
+                          href="detail-user.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>08123457890</td>
+                    <td>User Administrator Maker</td>
+                    <td>adminmaker@gmail.com</td>
+                    <td>
+                      <span class="dt-status status-success">Active</span>
+                    </td>
+                    <td>
+                      <span class="dt-status status-privilage">
+                        Adm. Maker
+                      </span>
+                    </td>
+                    <td>
+                      <div class="dt-actions d-flex align-items-center">
+                        <button
+                          class="btn btn-dt-action btn-outline-warning btn-flex"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalEdit"
+                        >
+                          <span class="icon-edit"></span>
+                          Edit
+                        </button>
+                        <a
+                          href="detail-user.html"
+                          class="btn btn-dt-action action-primary"
+                        >
+                          <span class="dt-icon-detail"></span>
+                          Detail
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      class="modal fade"
+      id="modalCreate"
+      tabindex="-1"
+      aria-labelledby="modalCreateLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Buat Akun Baru</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form
+              id="create-user-form"
+              action=""
+              method="POST"
+              autocomplete="off"
+            >
+              <div class="form-content">
+                <div class="form-group">
+                  <label for="status" class="form-label">Status</label>
+                  <select
+                    id="status"
+                    class="form-control select2"
+                    name="status"
+                    data-value="status"
+                    data-placeholder="Pilih status"
+                    data-dropdown-parent="#modalCreate"
+                    data-minimum-results-for-search="-1"
+                    required
+                  >
+                    <option value=""></option>
+                    <option value="1">Active</option>
+                    <option value="0">Block</option>
+                  </select>
+                  <div class="form-feedback"></div>
+                </div>
+                <div class="form-group">
+                  <label for="privilage" class="form-label">Privilege</label>
+                  <select
+                    id="privilage"
+                    class="form-control select2"
+                    name="privilage"
+                    data-value="privilage"
+                    data-placeholder="Pilih privilage"
+                    data-dropdown-parent="#modalCreate"
+                    data-minimum-results-for-search="-1"
+                    required
+                  >
+                    <option value=""></option>
+                    <option value="1">Reviewer</option>
+                    <option value="2">Integration Officer</option>
+                    <option value="3">Administrator Checker</option>
+                    <option value="4">Sales</option>
+                    <option value="5">GM Sales</option>
+                  </select>
+                  <div class="form-feedback"></div>
+                </div>
+                <div class="form-group">
+                  <label for="nama" class="form-label">Nama</label>
+                  <input
+                    id="nama"
+                    type="text"
+                    name="nama"
+                    class="form-control"
+                    placeholder="Masukkan nama"
+                    required
+                  />
+                  <div class="form-feedback"></div>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Masukkan email"
+                    required
+                  />
+                  <div class="form-feedback"></div>
+                </div>
+                <div class="form-group">
+                  <label for="password" class="form-label">Password</label>
+                  <div class="input-append append-right">
+                    <input
+                      id="password"
+                      type="password"
+                      name="password"
+                      class="form-control"
+                      placeholder="Masukkan password"
+                      required
+                    />
+                    <div
+                      class="append-icon icon-password"
+                      data-toggle="password"
+                    ></div>
+                  </div>
+                  <div class="form-feedback"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="submit"
+              form="create-user-form"
+              class="btn btn-primary w-100"
+              disabled
+            >
+              Simpan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalEdit"
+      tabindex="-1"
+      aria-labelledby="modalEditLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Status</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form
+              id="edit-user-form"
+              action=""
+              method="POST"
+              autocomplete="off"
+            >
+              <div class="form-content">
+                <div class="form-group">
+                  <label for="editStatus" class="form-label">Status</label>
+                  <select
+                    id="editStatus"
+                    class="form-control select2"
+                    name="status"
+                    data-value="status"
+                    data-placeholder="Pilih status"
+                    data-dropdown-parent="#modalEdit"
+                    data-minimum-results-for-search="-1"
+                    required
+                  >
+                    <option value=""></option>
+                    <option value="1" selected>Active</option>
+                    <option value="0">Block</option>
+                  </select>
+                  <div class="form-feedback"></div>
+                </div>
+                <div class="form-group">
+                  <label for="editPrivilage" class="form-label"
+                    >Privilege</label
+                  >
+                  <select
+                    id="editPrivilage"
+                    class="form-control select2"
+                    name="privilage"
+                    data-value="privilage"
+                    data-placeholder="Pilih privilage"
+                    data-dropdown-parent="#modalEdit"
+                    data-minimum-results-for-search="-1"
+                    required
+                  >
+                    <option value=""></option>
+                    <option value="1" selected>Reviewer</option>
+                    <option value="2">Integration Officer</option>
+                    <option value="3">Administrator Checker</option>
+                    <option value="4">Sales</option>
+                    <option value="5">GM Sales</option>
+                  </select>
+                  <div class="form-feedback"></div>
+                </div>
+                <div class="form-group">
+                  <label for="editNama" class="form-label">Nama</label>
+                  <input
+                    id="editNama"
+                    type="text"
+                    name="nama"
+                    class="form-control"
+                    placeholder="Masukkan nama"
+                    value="Samantha Putri"
+                    required
+                  />
+                  <div class="form-feedback"></div>
+                </div>
+                <div class="form-group">
+                  <label for="editEmail" class="form-label">Email</label>
+                  <input
+                    id="editEmail"
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Masukkan email"
+                    value="samanthaputri@gmail.com"
+                    required
+                  />
+                  <div class="form-feedback"></div>
+                </div>
+                <div class="form-group">
+                  <label for="editPassword" class="form-label">Password</label>
+                  <div class="input-append append-right">
+                    <input
+                      id="editPassword"
+                      type="password"
+                      name="password"
+                      class="form-control"
+                      placeholder="Masukkan password"
+                      value="testing123"
+                      required
+                    />
+                    <div
+                      class="append-icon icon-password"
+                      data-toggle="password"
+                    ></div>
+                  </div>
+                  <div class="form-feedback"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="submit"
+              form="edit-user-form"
+              class="btn btn-primary w-100"
+              disabled
+            >
+              Simpan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(function () {
+        let tableUserManagement = $("#tableUserManagement").DataTable({
+          dom: '<"dataTables_top">rt<"dataTables_bottom"ip><"clear">',
+        });
+        tableUserManagement
+          .on("order.dt search.dt", function () {
+            let i = 1;
+
+            tableUserManagement
+              .cells(null, 0, {
+                search: "applied",
+                order: "applied",
+              })
+              .every(function (cell) {
+                this.data(i++);
+              });
+          })
+          .draw();
+
+        app.CustomFilterDT.init();
+        app.FormValidation.init("#create-user-form");
+        app.FormValidation.init("#edit-user-form");
+      });
+    </script>
+  </body>
+</html>

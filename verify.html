@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" />
+    </a>
+  </div>
+</nav>
+
+    <main class="main">
+      <div class="auth-side-cover">
+        <img
+          src="img/logo-fello-merchant-white.svg"
+          alt="logo fello merchant"
+        />
+      </div>
+      <div class="auth-side-form justify-content-md-center">
+        <form action="" method="POST" class="form" autocomplete="off">
+          <div class="form-header">
+            <h1 class="form-header-title">Kode OTP</h1>
+            <p class="form-header-description">
+              Masukkan 6 digit kode OTP yang telah kami kirim ke email Anda
+              <span class="text-dark-70 font-bold"
+                >samanthaputri@gmail.com</span
+              >
+            </p>
+          </div>
+          <div class="form-content mb-5">
+            <div class="form-otp">
+              <div class="otp-input-group">
+                <input type="text" maxlength="1" />
+                <input type="text" maxlength="1" />
+                <input type="text" maxlength="1" />
+                <input type="text" maxlength="1" />
+                <input type="text" maxlength="1" />
+                <input type="text" maxlength="1" />
+                <span class="otp-loader"></span>
+              </div>
+              <p class="d-none otp-error-message">Kode OTP salah</p>
+            </div>
+          </div>
+          <div class="form-footer">
+            <p class="text-dark-70 text-sm">
+              Kirim ulang kode OTP dalam
+              <span class="text-dark-70 font-bold timer-otp">02:59</span>
+            </p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script type="text/javascript">
+      $(function () {
+        let typeParam = app.GetQueryParams.init("type");
+
+        $(".form").find("input")[0].focus();
+
+        const OtpCallback = (value) => {
+          if (value == "123456") {
+            inputOtp.isError(false);
+            inputOtp.showLoading();
+
+            setTimeout(() => {
+              inputOtp.hideLoading();
+
+              if (typeParam.value === "register") {
+                window.location.href = "merchant-onboarding.html";
+              } else if (typeParam.value === "forgot-password") {
+                window.location.href = "reset-password.html";
+              } else {
+                window.location.href = "index.html";
+              }
+            }, 3000);
+          } else {
+            inputOtp.isError(true);
+          }
+        };
+        const inputOtp = app.InputOtp.init(OtpCallback);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Merchant Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="css/styles.min.css" rel="stylesheet"><script src="js/app.min.js"></script></head>
+  <body>
+    <nav class="navbar-custom navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo-fello-merchant-black.svg" alt="fello merchant logo" />
+    </a>
+    <div
+      class="d-flex d-md-none icon-link-logout"
+      data-bs-toggle="modal"
+      data-bs-target="#modalLogout"
+    >
+      <img src="img/ic-logout-sm.svg" alt="icon logout" />
+      <span>Keluar</span>
+    </div>
+  </div>
+</nav>
+
+    <main class="main">
+      <div class="onboarding-step-cover">
+        <div class="d-flex flex-column align-items-start gap-5">
+          <img
+            src="img/logo-fello-merchant-black.svg"
+            class="img-logo"
+            alt="logo fello merchant"
+          />
+          <div class="step-area step-lg">
+  <div class="step-header">
+    <img
+      src="img/business-type-individual.svg"
+      class="step-header-img"
+      alt="individal type"
+    />
+    <span class="step-header-title">Individu</span>
+  </div>
+  <div class="steps-register">
+    <div class="step">
+      <div class="step-title">Informasi Pemilik</div>
+      <div class="step-description">Lengkapi data informasi pemilik</div>
+    </div>
+    <div class="step">
+      <div class="step-title">Informasi Perusahaan</div>
+      <div class="step-description">Lengkapi data informasi perusahaan</div>
+    </div>
+    <div class="step">
+      <div class="step-title">Informasi Usaha</div>
+      <div class="step-description">Lengkapi data informasi usaha</div>
+    </div>
+    <div class="step">
+      <div class="step-title">Pilih Layanan</div>
+      <div class="step-description">Sesuaikan layanan dengan kebutuhan</div>
+    </div>
+    <div class="step">
+      <div class="step-title">Rekening Bank</div>
+      <div class="step-description">Lengkapi data rekening bank</div>
+    </div>
+    <div class="step">
+      <div class="step-title">Upload Dokumen</div>
+      <div class="step-description">Upload kelengkapan dokumen</div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="onboarding-step-form">
+        <form
+          id="step-owner-information-form"
+          action=""
+          method="POST"
+          class="form form-validation"
+          autocomplete="off"
+        >
+          <div class="form-header">
+            <h1 class="form-header-title">Informasi Pemilik</h1>
+            <p class="form-header-description">
+              Lengkapi data informasi pemilik
+            </p>
+            <div class="step-area">
+  <div class="step-bar">
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+    <div class="step-progress">1/5</div>
+  </div>
+</div>
+
+          </div>
+          <div class="form-content">
+            <div class="form-group">
+              <label for="name" class="form-label">Nama Lengkap Pemilik</label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Masukkan nama lengkap pemilik"
+                required
+              />
+              <div class="form-feedback"></div>
+            </div>
+            <div class="d-flex flex-row gap-4">
+              <div class="form-group flex-fill">
+                <label for="placeOfBirth" class="form-label">
+                  Tempat Lahir
+                </label>
+                <input
+                  id="placeOfBirth"
+                  type="text"
+                  name="placeOfBirth"
+                  class="form-control"
+                  placeholder="Masukkan nama kota"
+                  required
+                />
+                <div class="form-feedback"></div>
+              </div>
+              <div class="form-group flex-fill">
+                <label for="dateOfBirth" class="form-label">
+                  Tanggal Lahir
+                </label>
+                <input
+                  id="dateOfBirth"
+                  type="text"
+                  name="dateOfBirth"
+                  class="form-control"
+                  placeholder="Pilih tanggal"
+                  data-toggle="datepicker"
+                  required
+                />
+                <div class="form-feedback"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="Masukkan email"
+                required
+              />
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="provinsi" class="form-label">Provinsi</label>
+              <select
+                id="provinsi"
+                class="form-control select2"
+                name="provinsi"
+                data-value="provinsi"
+                data-placeholder="Masukkan provinsi"
+                required
+              ></select>
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="kabupaten" class="form-label">Kota/Kabupaten</label>
+              <select
+                id="kabupaten"
+                class="form-control select2"
+                name="kabupaten"
+                data-value="kabupaten"
+                data-placeholder="Masukkan kota/kabupaten"
+                required
+              ></select>
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="kecamatan" class="form-label">Kecamatan</label>
+              <select
+                id="kecamatan"
+                class="form-control select2"
+                name="kecamatan"
+                data-value="kecamatan"
+                data-placeholder="Masukkan kecamatan"
+                required
+              ></select>
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="kelurahan" class="form-label">Kelurahan</label>
+              <select
+                id="kelurahan"
+                class="form-control select2"
+                name="kelurahan"
+                data-value="kelurahan"
+                data-placeholder="Masukkan kelurahan"
+                required
+              ></select>
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="address" class="form-label">Alamat</label>
+              <textarea
+                name="address"
+                id="address"
+                class="form-control"
+                rows="4"
+                placeholder="Masukkan nama jalan, nomor, lantai, blok, RT/RW"
+                required
+              ></textarea>
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="noKtp" class="form-label">Nomor KTP (NIK)</label>
+              <input
+                id="noKtp"
+                type="text"
+                name="noKtp"
+                class="form-control number-only"
+                placeholder="Masukkan nomor NIK"
+                minlength="10"
+                inputmode="numeric"
+                required
+              />
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="fotoKtp" class="input-file-box">
+                <div class="input-file-icon">
+                  <span class="placeholder-image"></span>
+                </div>
+                <div class="input-file-detail">
+                  <h3 class="file-detail-title">Foto KTP asli</h3>
+                  <p class="file-detail-subtitle">
+                    Maksimal 15Mb, format JPG, PNG
+                  </p>
+                </div>
+                <input
+                  type="file"
+                  id="fotoKtp"
+                  name="fotoKtp"
+                  class="d-none"
+                  accept="image/png,image/jpeg"
+                  required
+                />
+              </label>
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="fotoSelfieKtp" class="input-file-box">
+                <div class="input-file-icon">
+                  <span class="placeholder-image"></span>
+                </div>
+                <div class="input-file-detail">
+                  <h3 class="file-detail-title">Foto Selfie dengan KTP asli</h3>
+                  <p class="file-detail-subtitle">
+                    Maksimal 15Mb, format JPG, PNG
+                  </p>
+                </div>
+                <input
+                  type="file"
+                  id="fotoSelfieKtp"
+                  name="fotoSelfieKtp"
+                  class="d-none"
+                  accept="image/png,image/jpeg"
+                  required
+                />
+              </label>
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="noNpwp" class="form-label">Nomor NPWP</label>
+              <input
+                id="noNpwp"
+                type="text"
+                name="noNpwp"
+                class="form-control number-only"
+                placeholder="Masukkan nomor NPWP"
+                minlength="9"
+                inputmode="numeric"
+                required
+              />
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="fotoNpwp" class="input-file-box">
+                <div class="input-file-icon">
+                  <span class="placeholder-image"></span>
+                </div>
+                <div class="input-file-detail">
+                  <h3 class="file-detail-title">Foto NPWP</h3>
+                  <p class="file-detail-subtitle">
+                    Maksimal 15Mb, format JPG, PNG
+                  </p>
+                </div>
+                <input
+                  type="file"
+                  id="fotoNpwp"
+                  name="fotoNpwp"
+                  class="d-none"
+                  accept="image/png,image/jpeg"
+                  required
+                />
+              </label>
+              <div class="form-feedback"></div>
+            </div>
+            <div class="flash-message-warning">
+              <span class="icon-warning"></span>
+              Pastikan foto yang di upload terlihat dengan jelas dan tulisan
+              dapat dibaca
+            </div>
+          </div>
+          <div class="d-none d-md-flex form-footer flex-row">
+            <a
+              href="merchant-onboarding.html"
+              class="btn btn-outline-base w-25"
+            >
+              Kembali
+            </a>
+            <button type="submit" class="btn btn-primary w-75" disabled>
+              Lanjutkan
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <div class="action-bottom">
+      <a href="merchant-onboarding.html" class="btn btn-outline-base w-25">
+        Kembali
+      </a>
+      <button
+        type="submit"
+        form="step-owner-information-form"
+        class="btn btn-primary w-100 w-md-35"
+        disabled
+      >
+        Lanjutkan
+      </button>
+    </div>
+    <script type="text/javascript">
+      $(function () {
+        app.FormValidation.init("#step-owner-information-form");
+        app.SelectProvinsi.init();
+      });
+    </script>
+  </body>
+</html>
